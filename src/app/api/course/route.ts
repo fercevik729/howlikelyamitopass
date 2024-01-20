@@ -4,24 +4,34 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   const { title, description, units, offered } = await req.json();
 
+  let offeredIds: number[] = [];
+  for (const o of offered) {
+    const { id } = await prisma.quarterOffered.create({
+      data: {
+        quarter: o.quarter,
+        professors: {
+          connectOrCreate: {
+            where: {
+              name: o.name,
+            },
+            create: {
+              name: o.name,
+            },
+          },
+        },
+      },
+    });
+
+    offeredIds = [...offeredIds, id];
+  }
+
   const { id } = await prisma.course.create({
     data: {
       title,
       description,
       units: parseInt(units.trim()),
       offered: {
-        createMany: {
-          data: offered.map((o: any) => ({
-            quarter: o.quarter,
-            professors: {
-              createMany: {
-                data: o.professors.map((p: any) => ({
-                  name: p.name,
-                })),
-              },
-            },
-          })),
-        },
+        connect: offeredIds.map((id) => ({ id })),
       },
     },
     select: {
