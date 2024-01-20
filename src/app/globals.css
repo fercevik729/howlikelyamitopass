@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-sans;
 }
 
@@ -15,12 +20,12 @@ section {
 }
 
 body {
-  background-color: #2F8FEF;
+  background-color: #2f8fef;
   color: #fff;
 }
 
 section#hero {
-  background-color: #3E93E9;
+  background-color: #3e93e9;
   background-image: url("../images/background.svg");
   background-position: bottom;
 }

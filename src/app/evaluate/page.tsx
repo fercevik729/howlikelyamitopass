@@ -1,4 +1,1 @@
-
-export default function Evaluate() {
-
-}
+export default function Evaluate() {}
