@@ -10,14 +10,16 @@ export async function POST(req: NextRequest) {
       data: {
         quarter: o.quarter,
         professors: {
-          connectOrCreate: {
-            where: {
-              name: o.name,
-            },
-            create: {
-              name: o.name,
-            },
-          },
+          connectOrCreate: o.professors.map((p: string) => {
+            return {
+              where: {
+                name: p,
+              },
+              create: {
+                name: p,
+              },
+            };
+          }),
         },
       },
     });
