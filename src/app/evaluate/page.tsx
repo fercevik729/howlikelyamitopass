@@ -1,10 +1,15 @@
 import {Typography} from "@mui/material";
 import ProfessorChoice from "@/components/ProfessorChoice";
-import { promises as fs } from 'fs';
-import {Course} from "@/types/model";
+import { promises as fs } from "fs";
+import { Course } from "@/types/model";
 
 async function getData() {
-  const file = await fs.readFile(process.cwd() + '/src/app/sample.json', 'utf8');
+  // const res = await fetch('http://localhost:3000/api')
+
+  const file = await fs.readFile(
+    process.cwd() + "/src/app/sample.json",
+    "utf8",
+  );
 
   const data = JSON.parse(file);
   const courses: Course[] = [];
@@ -13,7 +18,7 @@ async function getData() {
   for (const dataKey in data) {
     const course: Course = {
       id: dataKey,
-      ...data[dataKey]
+      ...data[dataKey],
     };
     courses.push(course);
   }
