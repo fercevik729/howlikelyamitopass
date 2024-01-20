@@ -1,26 +1,29 @@
 import requests
+import ratemyprofessor
 from bs4 import BeautifulSoup
 
 #FIX ME
 def search_prof(query):
 	# Send a GET request to the search URL
-	page = requests.get("https://www.ratemyprofessors.com/search/professors/1078?q=" + str(query))
-	if page.status_code == 200:
+    page = requests.get("https://www.ratemyprofessors.com/search/professors/1078?q=" + str(query))
+    if page.status_code == 200:
         	# Parse the HTML content
-		soup = BeautifulSoup(page.text, "html.parser")
-		print(soup.text)
-	else:
-		print("Professor not found.")	
+        soup = BeautifulSoup(page.text, "html.parser")
+    else:
+        print("Professor not found.")	
 
 search_prof("Darrell Long")
 
 
+professor = ratemyprofessor.get_professor_by_school_and_name(
+    ratemyprofessor.get_school_by_name("University of California Santa Cruz"), "Darrell Long")
 
+print(professor)
+print(professor.id)
 
 # REFERENCE
-'''
 # Professor URL (Long)
-url = "https://www.ratemyprofessors.com/professor/304658"
+url = f"https://www.ratemyprofessors.com/professor/{professor.id}"
 page = requests.get(url)
 
 # Selecting Page
@@ -54,4 +57,3 @@ try:
 	print("Comment:", comment)
 except:
 	print("No Comment")
-'''
