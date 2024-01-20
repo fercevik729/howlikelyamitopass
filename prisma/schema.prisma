@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model Course {
+  id          Int              @id @default(autoincrement())
+  title       String           @unique
+  description String?
+  units       Int
+  offered     QuarterOffered[]
+}
+
+model QuarterOffered {
+  id         Int         @id @default(autoincrement())
+  quarter    String
+  courseId   Int?
+  course     Course?     @relation(fields: [courseId], references: [id])
+  professors Professor[]
+}
+
+model Professor {
+  id               Int              @id @default(autoincrement())
+  name             String           @unique
+  tags             String[]
+  rating           Float?
+  wouldRepeat      Float?
+  difficulty       Float?
+  comments         String[]
+  quarters         QuarterOffered[]
+}
