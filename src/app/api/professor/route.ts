@@ -5,7 +5,10 @@ export async function POST(req: NextRequest) {
   const { name, tags, rating, wouldRepeat, difficulty, comments } =
     await req.json();
 
-  const { id } = await prisma.professor.create({
+  const { id } = await prisma.professor.update({
+    where: {
+      name,
+    },
     data: {
       name,
       tags,
@@ -19,7 +22,7 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  return NextResponse.json({ professorId: id });
+  return NextResponse.json({ professorID: id });
 }
 
 export async function GET(req: NextRequest) {

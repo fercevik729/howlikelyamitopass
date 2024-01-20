@@ -13,7 +13,13 @@ export async function POST(req: NextRequest) {
         createMany: {
           data: offered.map((o: any) => ({
             quarter: o.quarter,
-            professors: o.professors,
+            professors: {
+              createMany: {
+                data: o.professors.map((p: any) => ({
+                  name: p.name,
+                })),
+              },
+            },
           })),
         },
       },
