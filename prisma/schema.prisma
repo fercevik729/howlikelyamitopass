@@ -16,8 +16,6 @@ model Course {
   description String?
   units       Int
   offered     QuarterOffered[]
-  Professor   Professor?       @relation(fields: [professorId], references: [id])
-  professorId Int?
 }
 
 model QuarterOffered {
@@ -31,10 +29,9 @@ model QuarterOffered {
 model Professor {
   id          Int      @id @default(autoincrement())
   name        String
-  courses     Course[]
   tags        String[]
   rating      Float
   wouldRepeat Float
-  difficulty  Int
+  difficulty  Float
   comments    String[]
 }
