@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import {Inter, Raleway, Roboto} from "next/font/google";
+import { Inter, Raleway, Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 const raleway = Raleway({
-    subsets: ['latin'],
-    variable: '--font-raleway',
-    });
+  subsets: ["latin"],
+  variable: "--font-raleway",
+});
 
 const roboto = Roboto({
-    subsets: ['latin'],
-    variable: '--font-roboto',
-    weight: ['300', '400', '500', '700'],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -30,10 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-          <body className={`${raleway.variable} ${roboto.variable}`}>
-          <NavBar />
-          {children}
-          </body>
+      <body className={`${raleway.variable} ${roboto.variable}`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
