@@ -22,14 +22,15 @@ QUARTERS = ['Fall', 'Winter', 'Spring', 'Summer']
 # - First row can be this/next year
 # - But second row MUST be next year (if next year's is release)
 # NOTE: Years may be flawed. Please re-evaluate code with team.
+# Returns a boolean if it was deleted
 def examine_row(row, courseId, shouldDelete):
-    if firstRow:
-        # Now, get the first column (first <td>) within the firstRow
-        yearColumn = firstRow[0].select('td:nth-of-type(1)')
+    if row:
+        # Now, get the first column (first <td>) within the row
+        yearColumn = row[0].select('td:nth-of-type(1)')
         yearColumnText = yearColumn[0].text
-        fallColumn = firstRow[0].select('td:nth-of-type(2)')
-        winterColumn = firstRow[0].select('td:nth-of-type(3)')
-        summerColumn = firstRow[0].select('td:nth-of-type(4)')
+        fallColumn = row[0].select('td:nth-of-type(2)')
+        winterColumn = row[0].select('td:nth-of-type(3)')
+        summerColumn = row[0].select('td:nth-of-type(4)')
         quarters = [fallColumn, winterColumn, summerColumn]
 
         # Checks to see if text is this year or last year
@@ -63,6 +64,14 @@ def examine_row(row, courseId, shouldDelete):
             if shouldDelete:
                 print('Deleting in dictionary...')
                 del courseDictionary[courseId]
+                return True
+    else:
+        print("Row does not exist")
+        if shouldDelete:
+            print('Deleting in dictionary...')
+            del courseDictionary[courseId]
+            return True
+    return False
 
 
 # Catalog URL
@@ -101,10 +110,11 @@ for course in courses:
     }
 
     firstRow = tempSoup.select('table > tbody > tr:nth-of-type(1)')
-    examine_row(firstRow, courseId, True)
+    deleted = examine_row(firstRow, courseId, True)
 
-    secondRow = tempSoup.select('table > tbody > tr:nth-of-type(2)')
-    examine_row(secondRow, courseId, False)
+    if not deleted:
+        secondRow = tempSoup.select('table > tbody > tr:nth-of-type(2)')
+        examine_row(secondRow, courseId, False)
 
 # Convert and write JSON object to file
 with open("sample.json", "w") as outfile:
