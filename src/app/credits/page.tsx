@@ -1,4 +1,1 @@
-
-export default function Credits() {
-
-}
+export default function Credits() {}

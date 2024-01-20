@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function About() {
 	return (
 	<>
@@ -11,3 +12,6 @@ export default function About() {
 	</>
 	);
 }
+=======
+export default function About() {}
+>>>>>>> refs/remotes/origin/main
