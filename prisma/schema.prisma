@@ -9,23 +9,23 @@ datasource db {
 
 model Course {
   id          Int              @id @default(autoincrement())
-  title       String
+  title       String           @unique
   description String?
   units       Int
   offered     QuarterOffered[]
 }
 
 model QuarterOffered {
-  id         Int                         @id @default(autoincrement())
+  id         Int         @id @default(autoincrement())
   quarter    String
   courseId   Int?
-  course     Course?                     @relation(fields: [courseId], references: [id])
+  course     Course?     @relation(fields: [courseId], references: [id])
   professors Professor[]
 }
 
 model Professor {
-  id               Int                         @id @default(autoincrement())
-  name             String                      @unique
+  id               Int              @id @default(autoincrement())
+  name             String           @unique
   tags             String[]
   rating           Float?
   wouldRepeat      Float?
