@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Professor URL (Long)
-url = "https://www.ratemyprofessors.com/professor/304658"
+url = "https://www.ratemyprofessors.com/professor/1883634"
 page = requests.get(url)
 
 # Selecting Page
@@ -16,7 +16,7 @@ for mytag in proftags:
 		my_dict[mytag.text] = 1
 	else:
 		my_dict[mytag.text] += 1
-#print("Tags:" my_dict) 
+# print("Tags:", my_dict) 
 
 # Overall Rating
 overall = soup.find("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw" }).get_text(strip=True)
