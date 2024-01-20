@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #4776E6;
+  --background-start-rgb: #4776E6;
+  --background-end-rgb: #8E54E9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,15 +19,13 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
+      to right,
       transparent,
-      rgb(var(--background-end-rgb))
+      var(--background-end-rgb)
     )
-    rgb(var(--background-start-rgb));
+    var(--background-start-rgb);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans;
 }

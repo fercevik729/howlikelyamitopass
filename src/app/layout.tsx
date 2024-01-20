@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Inter, Raleway, Roboto} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const raleway = Raleway({
+    subsets: ['latin'],
+    variable: '--font-raleway',
+    });
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    variable: '--font-roboto',
+    weight: ['300', '400', '500', '700'],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${raleway.variable} ${roboto.variable}`}>{children}</body>
     </html>
   );
 }
