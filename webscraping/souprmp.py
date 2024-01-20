@@ -2,6 +2,8 @@ import requests
 import ratemyprofessor
 from bs4 import BeautifulSoup
 
+# name->tag->rating->take again->difficulty->comment
+
 professor_names = ["Darrell Long", "Kerry Veenstra", "Lindsey Kuper"]
 
 for name in professor_names:
