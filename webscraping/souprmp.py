@@ -2,58 +2,52 @@ import requests
 import ratemyprofessor
 from bs4 import BeautifulSoup
 
-#FIX ME
-def search_prof(query):
-	# Send a GET request to the search URL
-    page = requests.get("https://www.ratemyprofessors.com/search/professors/1078?q=" + str(query))
-    if page.status_code == 200:
-        	# Parse the HTML content
-        soup = BeautifulSoup(page.text, "html.parser")
-    else:
-        print("Professor not found.")	
+professor_names = ["Darrell Long", "Kerry Veenstra", "Lindsey Kuper"]
 
-search_prof("Darrell Long")
+for name in professor_names:
+    professor = ratemyprofessor.get_professor_by_school_and_name(ratemyprofessor.get_school_by_name("University of California Santa Cruz"), name)
 
+    # Professor URL
+    url = f"https://www.ratemyprofessors.com/professor/{professor.id}"
+    page = requests.get(url)
 
-professor = ratemyprofessor.get_professor_by_school_and_name(
-    ratemyprofessor.get_school_by_name("University of California Santa Cruz"), "Darrell Long")
+    # Selecting Page
+    soup = BeautifulSoup(page.text, "html.parser")
 
-print(professor)
-print(professor.id)
+    # Name
+    print("Professor's Name: ", name)
 
-# REFERENCE
-# Professor URL (Long)
-url = f"https://www.ratemyprofessors.com/professor/{professor.id}"
-page = requests.get(url)
+    # Tags
+    proftags = soup.findAll("span", {"class": "Tag-bs9vf4-0 hHOVKF" })
+    my_dict = {}
+    for mytag in proftags:
+        if mytag.text not in my_dict:
+            my_dict[mytag.text] = 1
+        else:
+            my_dict[mytag.text] += 1
+    print("Tags:", my_dict) 
 
-# Selecting Page
-soup = BeautifulSoup(page.text, "html.parser")
+    # Overall Rating
+    overall = soup.find("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw" }).get_text(strip=True)
+    #print("Overall:", overall)
 
-# Tags
-proftags = soup.findAll("span", {"class": "Tag-bs9vf4-0 hHOVKF" })
-my_dict = {}
-for mytag in proftags:
-	if mytag.text not in my_dict:
-		my_dict[mytag.text] = 1
-	else:
-		my_dict[mytag.text] += 1
-print("Tags:", my_dict) 
+    # Feedback (Dealing with same div, would take again and difficulty)
+    feedback = soup.find_all("div", {"class": "FeedbackItem__StyledFeedbackItem-uof32n-0 dTFbKx"})
 
-# Overall Rating
-overall = soup.find("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw" }).get_text(strip=True)
-#print("Overall:", overall)
+    for i in feedback:
+        num = i.find("div", {"class": "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"}).get_text(strip=True)
+        desc = i.find("div", {"class": "FeedbackItem__FeedbackDescription-uof32n-2 hddnCs"}).get_text(strip=True)
+        print(f"{desc}: {num}")
 
-# Feedback (Dealing with same div, would take again and difficulty)
-feedback = soup.find_all("div", {"class": "FeedbackItem__StyledFeedbackItem-uof32n-0 dTFbKx"})
+    # Comments
+    print ("")
+    print ("---Comment Section---")
+    try:
+        comments = soup.find_all("div", {"class": "Comments__StyledComments-dzzyvm-0 gRjWel"})
+        for comment in comments:
+            text = comment.get_text(strip=True)
+            print("Comment:", text)
+            print("")
 
-for i in feedback:
-    num = i.find("div", {"class": "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"}).get_text(strip=True)
-    desc = i.find("div", {"class": "FeedbackItem__FeedbackDescription-uof32n-2 hddnCs"}).get_text(strip=True)
-    print(f"{desc}: {num}")
-
-# Comments
-try:
-	comment = soup.find("div", {"class": "Comments__StyledComments-dzzyvm-0 gRjWel"}).get_text(strip=True)
-	print("Comment:", comment)
-except:
-	print("No Comment")
+    except:
+            print("No Comments Found")
