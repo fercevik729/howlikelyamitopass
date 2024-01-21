@@ -33,7 +33,7 @@ export default function Results() {
           textAlign: "center",
         }}
       >
-        The tools and documentation we used are: Next.js, React, BeautifulSoup4,
+        The tools we used are: Next.js, React, BeautifulSoup4,
         RateMyProfessorAPI, Material UI, Langchain, Prisma, Vercel, SQL
       </p>
       <div
@@ -91,7 +91,7 @@ export default function Results() {
         </div>
         <div style={{ color: "#cff", textAlign: "center", width: "100%" }}>
           Created langchain prompts, setup database and API&apos;s, deployed to
-          Vercel, and helped integrate backend with frontend
+          Vercel, and integrated backend with frontend
         </div>
         <div style={{ color: "#cff", textAlign: "center", width: "100%" }}>
           Web scraper for the BSOE website, frontend class selection page, API

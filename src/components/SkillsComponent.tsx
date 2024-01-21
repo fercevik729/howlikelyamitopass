@@ -40,7 +40,7 @@ export default function SkillsComponent(props: {
       <button>
         <p
           onClick={() => props.handleSkip()}
-          className="text-xs text-gray-300 hover:text-gray-100 font-sans"
+          className="text-xs text-white border-1 p-2 mb-2 rounded-full hover:text-black hover:bg-white font-sans"
         >
           Skip
         </p>
@@ -48,7 +48,7 @@ export default function SkillsComponent(props: {
       <button>
         <p
           onClick={() => props.handleBack()}
-          className="text-xs text-gray-300 hover:text-gray-100 font-sans my-1"
+          className="text-xs border-1 rounded-full p-2 text-white hover:text-black hover:bg-white font-sans my-1"
         >
           Back
         </p>
