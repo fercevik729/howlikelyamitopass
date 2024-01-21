@@ -1,6 +1,6 @@
 "use client";
 import { APP_URL } from "@/config";
-import { Button, Skeleton } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
 import ResultsPercentage from "@/components/ResultsPercentage";
@@ -50,16 +50,7 @@ function SurveyResponse() {
   }, []);
 
   if (loading) {
-    return (
-      <>
-        <Skeleton
-          variant="rectangular"
-          animation="wave"
-          width={800}
-          height={50}
-        />
-      </>
-    );
+    return <CircularProgress />;
   }
   if (error) {
     return (
@@ -72,9 +63,24 @@ function SurveyResponse() {
     <div className="flex flex-row justify-between">
       <ResultsPercentage percentage={passRate * 100} />
 
-      <div className="flex flex-col text-wrap w-3/4">
-        <h1>Summary</h1>
+      <div className="flex flex-col text-wrap w-2/5 mx-36">
+        <h2 className="text-2xl">Summary</h2>
         <p>{summary}</p>
+      </div>
+
+      <div className="flex flex-row text-wrap w-1/3">
+        <div className="flex flex-col pr-8">
+          <h2 className="text-2xl mb-2">Pros</h2>
+          <p>Advice goes here</p>
+          <p>asjdklae</p>
+          <p>dajkdlean</p>
+        </div>
+        <div className="flex flex-col border-l-2 pl-8">
+          <h2 className="text-2xl mb-2">Cons</h2>
+          <p>Advice goes here</p>
+          <p>jdlakjsdsajld</p>
+          <p>askdjlajdle</p>
+        </div>
       </div>
     </div>
   );
@@ -84,8 +90,8 @@ export default function Results() {
   return (
     <main>
       <section id={"hero"} className={`flex flex-col py-36 items-center gap-4`}>
-        <h2 className="text-2xl mb-8 text-center">Your Results</h2>
-        <Suspense fallback={<Skeleton animation="wave" />}>
+        <h2 className="text-2xl mb-8 text-center border-b-2">Your Results</h2>
+        <Suspense fallback={<CircularProgress color="primary" />}>
           <SurveyResponse />
         </Suspense>
         <Link href={"/evaluate"}>
