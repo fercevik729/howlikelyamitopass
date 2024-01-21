@@ -29,3 +29,20 @@ section#hero {
   background-image: url("../images/background.svg");
   background-position: bottom;
 }
+
+/* This styles the scrollbar track (the part the thumb moves along) */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Makes the track background transparent */
+}
+
+/* This styles the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: white; /* White thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* This styles the scrollbar itself (including the thumb, track, and buttons) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar (if applicable) */
+}
