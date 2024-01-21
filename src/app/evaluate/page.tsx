@@ -1,29 +1,14 @@
 import ProfessorChoice from "@/components/ProfessorChoice";
 import ProfessorStats from "@/components/ProfessorStats";
+import { Course } from "@/types/model";
 
 async function getData() {
-  // const res = await fetch('http://localhost:3000/api/courses')
-  //
-  // const data = res.json();
-  // const courses: Course[] = [];
-  //
-  // // TEMP
-  // for (const dataKey in data) {
-  //   const course: Course = {
-  //     id: dataKey,
-  //     ...data[dataKey],
-  //   };
-  //   courses.push(course);
-  // }
-  //
-  // // if (!res.ok) {
-  // //   // This will activate the closest `error.js` Error Boundary
-  // //   throw new Error('Failed to fetch data')
-  // // }
-  //
-  // console.log('is here')
+  const baseUrl = process.env.VERCEL_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/courses`);
 
-  return [];
+  const courses: Course[] = await res.json();
+
+  return courses;
 }
 
 export default async function Evaluate() {
