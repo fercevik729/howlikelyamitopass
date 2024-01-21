@@ -51,5 +51,10 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "overrides": {
+    "react-wheel-of-prizes": {
+      "react": "$react"
+    }
   }
 }
