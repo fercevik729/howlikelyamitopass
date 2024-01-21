@@ -3,8 +3,8 @@ import ProfessorStats from "@/components/ProfessorStats";
 import { Course } from "@/types/model";
 
 async function getData() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${apiUrl}/api/courses`);
+  const baseUrl = process.env.VERCEL_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/courses`);
 
   const courses: Course[] = await res.json();
 
