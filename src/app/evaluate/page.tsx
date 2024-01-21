@@ -3,7 +3,8 @@ import ProfessorStats from "@/components/ProfessorStats";
 import { Course } from "@/types/model";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/courses");
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${apiUrl}/api/courses`);
 
   const courses: Course[] = await res.json();
 
