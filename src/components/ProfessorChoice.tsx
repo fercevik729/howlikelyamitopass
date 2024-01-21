@@ -46,7 +46,7 @@ export default function ProfessorChoice({
   }, [courses]);
 
   return (
-    <div>
+    <div className={"w-max justify-self-end"}>
       <div className={"flex flex-col gap-6"}>
         <ul className={"flex gap-3"}>
           {coursesByQuarterYear &&
