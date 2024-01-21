@@ -30,7 +30,7 @@ export default function ResultsPercentage(props: { percentage: number }) {
         </p>
         <p className="text-center">chance you pass</p>
       </div>
-      <div className="scale-50 w-24 h-24 -translate-x-28 -translate-y-32">
+      <div className="scale-50 w-32 h-24 -translate-x-32 -translate-y-32">
         {wheel && (
           <WheelComponent
             segments={segments}

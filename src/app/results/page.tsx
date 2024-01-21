@@ -1,10 +1,10 @@
 "use client";
 import { APP_URL } from "@/config";
 import { Button, Skeleton } from "@mui/material";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
 import ResultsPercentage from "@/components/ResultsPercentage";
+import Link from "next/link";
 
 function SurveyResponse() {
   const searchParams = useSearchParams();
@@ -80,12 +80,13 @@ function SurveyResponse() {
   }
 
   return (
-    <div>
+    <div className="flex flex-row justify-between">
       {loadwheel && <ResultsPercentage percentage={passRate * 100} />}
-      <p>{summary}</p>
-      {passRate && <p>Pass rate: {passRate}</p>}
 
-      <div className="flex flex-col gap-2 mt-5 font-mono">
+      <div className="flex flex-col text-wrap w-3/4">
+        <h1>Summary</h1>
+        <p>{summary}</p>
+
         <h2> Pros</h2>
         {pros?.map((pro: any) => {
           return <p key={`Pro: ${pro}`}>{pro}</p>;
@@ -104,7 +105,7 @@ function SurveyResponse() {
 export default function Results() {
   return (
     <main>
-      <section id={"hero"} className={`flex flex-col py-36 items-center`}>
+      <section id={"hero"} className={`flex flex-col py-36 items-center gap-4`}>
         <h2 className="text-2xl mb-8 text-center">Your Results</h2>
         <Suspense fallback={<Skeleton animation="wave" />}>
           <SurveyResponse />
@@ -112,9 +113,12 @@ export default function Results() {
         <Link href={"/evaluate"}>
           <Button
             variant="outlined"
-            style={{ color: "white", borderColor: "white" }}
+            style={{
+              color: "white",
+              borderColor: "white",
+            }}
           >
-            Back to Professors
+            Return to professors!
           </Button>
         </Link>
       </section>

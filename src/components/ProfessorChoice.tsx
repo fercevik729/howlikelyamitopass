@@ -7,6 +7,7 @@ interface ProfessorChoiceProps {
   courses: Course[];
   professorSelected: Professor | undefined;
   setProfessorSelected: any;
+  setCourse: any;
 }
 
 interface CourseByQuarterYear {
@@ -17,6 +18,7 @@ export default function ProfessorChoice({
   courses,
   professorSelected,
   setProfessorSelected,
+  setCourse,
 }: ProfessorChoiceProps) {
   // Separate the courses into groups by quarter year
   const [coursesByQuarterYear, setCoursesByQuarterYear] =
@@ -66,6 +68,7 @@ export default function ProfessorChoice({
                     onClick={() => {
                       setQuarterSelected(quarterYear);
                       setCourseSelected(undefined);
+                      setCourse("");
                       setProfessorSelected(undefined);
                     }}
                   >
@@ -100,6 +103,7 @@ export default function ProfessorChoice({
                         }}
                         onClick={() => {
                           setCourseSelected(course);
+                          setCourse(course.title);
                           setProfessorSelected(undefined);
                         }}
                       >

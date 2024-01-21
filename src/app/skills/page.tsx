@@ -7,10 +7,11 @@ import Fade from "@mui/material/Fade";
 import { CircularProgress } from "@mui/material";
 import { APP_URL } from "@/config";
 import Link from "next/link";
+import { Button } from "@mui/material";
 
 function Skills() {
   const searchParams = useSearchParams();
-  const Class = searchParams.get("class");
+  const Class = searchParams.get("course");
   const Professor = searchParams.get("professor");
   if (!Class || !Professor) {
     console.error(`Error: Class or professor not provided as search parameter`);
@@ -208,7 +209,15 @@ function Skills() {
                 },
               }}
             >
-              See Results
+              <Button
+                variant="outlined"
+                style={{
+                  color: "white",
+                  borderColor: "white",
+                }}
+              >
+                See Results
+              </Button>
             </Link>
           )}
         </Fade>
