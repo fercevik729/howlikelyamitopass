@@ -7,7 +7,6 @@ import Fade from "@mui/material/Fade";
 import { CircularProgress } from "@mui/material";
 import { APP_URL } from "@/config";
 import Link from "next/link";
-import { Button } from "@mui/material";
 
 function Skills() {
   const searchParams = useSearchParams();
@@ -42,6 +41,15 @@ function Skills() {
   const [pros, setPros] = useState<string[]>([]);
   const [cons, setCons] = useState<string[]>([]);
   const [prerequisites, setPrerequisites] = useState<string[]>([]);
+  const [dots, setDots] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (dots === "...") setDots("");
+      else setDots(dots + ".");
+    }, 300);
+    return () => clearInterval(interval);
+  }, [dots]);
 
   useEffect(() => {
     if (!loading) return;
@@ -143,16 +151,10 @@ function Skills() {
   }, [goback]);
 
   const handleChoose = (option: string) => {
-    if (answers.length + 1 === skills.length) {
-      setDone(true);
-    }
     setAnswers([...answers, option]);
     setShown(false);
   };
   const handleSkip = () => {
-    if (answers.length + 1 === skills.length) {
-      setDone(true);
-    }
     setAnswers([...answers, ""]);
     setShown(false);
   };
@@ -168,7 +170,8 @@ function Skills() {
   useEffect(() => {
     if (shown) return;
     const timer = setTimeout(() => {
-      setNum(answers.length);
+      if (answers.length >= skills.length) setDone(true);
+      else setNum(answers.length);
       setShown(true);
     }, 200);
     return () => clearTimeout(timer);
@@ -176,7 +179,7 @@ function Skills() {
 
   return (
     <main>
-      <section id={"hero"} className={`flex flex-col py-12 items-center`}>
+      <section id={"hero"} className={`flex flex-col items-center`}>
         <p className="text-2xl mb-8 text-center font-bold">{`${Class} - ${Professor}`}</p>
         <Fade in={shown} timeout={{ enter: 300, exit: 300 }}>
           {!done ? (
@@ -192,7 +195,12 @@ function Skills() {
                 />
               )}
               {(loading || loading2 || !loaded) && (
-                <CircularProgress color="inherit" />
+                <div className="flex flex-col items-center">
+                  <CircularProgress color="inherit" />
+                  <div className="w-16">
+                    <p className="text-left py-2 font-serif">Loading{dots}</p>
+                  </div>
+                </div>
               )}
             </div>
           ) : (
@@ -209,15 +217,9 @@ function Skills() {
                 },
               }}
             >
-              <Button
-                variant="outlined"
-                style={{
-                  color: "white",
-                  borderColor: "white",
-                }}
-              >
-                See Results
-              </Button>
+              <button className="transition-all duration-150 mx-3 w-32 h-10 rounded-lg border-1 border-white hover:bg-white hover:text-black flex items-center justify-center">
+                <p className="font-sans font-medium">See Results</p>
+              </button>
             </Link>
           )}
         </Fade>
