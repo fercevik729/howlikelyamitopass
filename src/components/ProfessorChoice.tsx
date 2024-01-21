@@ -94,7 +94,7 @@ export default function ProfessorChoice({
         <div className={"flex gap-16"}>
           <div className="w-36">
             <Typography variant={"h6"}>Classes</Typography>
-            <ul className={"flex flex-col gap-3 h-[60vh] overflow-scroll px-3"}>
+            <ul className={"flex flex-col gap-3 h-[60vh] overflow-scroll pr-3"}>
               {quarterSelected &&
                 coursesByQuarterYear[quarterSelected].map((course: Course) => {
                   return (

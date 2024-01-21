@@ -16,7 +16,6 @@ export default function ProfessorStats({
   const [index, setIndex] = useState<number>(0);
 
   const missingData = professor.rating === null;
-  console.log(`${missingData}`);
 
   return (
     <div className="border border-white py-[35px] px-[40px] rounded-2xl">
@@ -125,7 +124,10 @@ export default function ProfessorStats({
           </div>
         </div>
       ) : (
-        <div id="again" className={"flex flex-col justify-center font-mono"}>
+        <div
+          id="again"
+          className={"flex flex-col justify-center font-mono mt-18"}
+        >
           <span className={"text-2xl text-center font-semibold"}>
             {"Not enough data"}
           </span>

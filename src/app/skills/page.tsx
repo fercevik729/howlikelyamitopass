@@ -201,7 +201,7 @@ function Skills() {
                 <div className="flex flex-col items-center">
                   <CircularProgress color="inherit" />
                   <div className="w-16">
-                    <p className="text-left py-2 font-serif">Loading{dots}</p>
+                    <p className="text-left py-2 font-mono">Loading{dots}</p>
                   </div>
                 </div>
               )}
