@@ -14,6 +14,7 @@ for name in professor_names:
 	# Professor URL
 	url = f"https://www.ratemyprofessors.com/professor/{professor.id}"
 	page = requests.get(url)
+
 	# how_likely URL
 	how_likely = "https://howlikelyamitopass.vercel.app/api/professor"
 
@@ -30,11 +31,11 @@ for name in professor_names:
 	my_dict = {}
 	for mytag in proftags:
 		if mytag.text not in my_dict:
-		my_dict[mytag.text] = 1
-	else:
-		my_dict[mytag.text] += 1
+			my_dict[mytag.text] = 1
+		else:
+			my_dict[mytag.text] += 1
 	print("Tags:", my_dict) 
-
+	
 	# Overall Rating
 	overall = soup.find("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw" }).get_text(strip=True)
 	#print("Overall:", overall)
@@ -48,14 +49,14 @@ for name in professor_names:
 		print(f"{desc}: {num}")
 
 	# Comments
-	print ("")
-	print ("---Comment Section---")
 	try:
 		comments = soup.find_all("div", {"class": "Comments__StyledComments-dzzyvm-0 gRjWel"})
 		for comment in comments:
-		text = comment.get_text(strip=True)
-		print("Comment:", text)
-		print("")
+			'''
+			text = comment.get_text(strip=True)
+			print("Comment:", text)
+			print("")
+			'''
 
 	except:
 		print("No Comments Found")
@@ -63,4 +64,9 @@ for name in professor_names:
 	json_data = json.dumps(data)
 	headers = {"Content-Type" : "application/json"}
 	requesting = requests.post(how_likely, data=json_data, headers=headers)
-	
+	if (requesting.status_code == 200):
+		print ("post successful")
+		print ("response:", requesting.json())
+	else:
+		print("failed with status code: ", requesting.status_code)
+		print("response content:", requesting.text)	
