@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+
+import React, { Suspense, useEffect, useState } from "react";
 import SkillsComponent from "@/components/skills";
 import { redirect, useSearchParams } from "next/navigation";
 import Fade from "@mui/material/Fade";
@@ -23,7 +24,7 @@ const SKILLS = [
   },
 ];
 
-export default function Skills() {
+function Skills() {
   const searchParams = useSearchParams();
   const Class = searchParams.get("class");
   const Professor = searchParams.get("professor");
@@ -37,16 +38,16 @@ export default function Skills() {
         - Use Class and Professor to obtain SKILLS
     */
 
-  const [answers, setAnswers] = React.useState<string[]>([]);
-  const [num, setNum] = React.useState(0);
-  const [shown, setShown] = React.useState(false);
-  const [done, setDone] = React.useState(false);
-  const [goback, setGoback] = React.useState(false);
+  const [answers, setAnswers] = useState<string[]>([]);
+  const [num, setNum] = useState(0);
+  const [shown, setShown] = useState(false);
+  const [done, setDone] = useState(false);
+  const [goback, setGoback] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (done) redirect("/results");
   }, [done]);
-  React.useEffect(() => {
+  useEffect(() => {
     if (goback) redirect("/evaluate");
   }, [goback]);
 
@@ -72,7 +73,7 @@ export default function Skills() {
     a.pop();
     setAnswers(a);
   };
-  React.useEffect(() => {
+  useEffect(() => {
     if (shown) return;
     const timer = setTimeout(() => {
       setNum(answers.length);
@@ -99,5 +100,13 @@ export default function Skills() {
         </Fade>
       </section>
     </main>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Skills />
+    </Suspense>
   );
 }
