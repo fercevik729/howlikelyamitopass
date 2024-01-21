@@ -179,7 +179,10 @@ function Skills() {
 
   return (
     <main>
-      <section id={"hero"} className={`flex flex-col items-center`}>
+      <section
+        id={"hero"}
+        className={`flex flex-col py-20 items-center h-[80vh]`}
+      >
         <p className="text-2xl mb-8 text-center font-bold">{`${Class} - ${Professor}`}</p>
         <Fade in={shown} timeout={{ enter: 300, exit: 300 }}>
           {!done ? (
