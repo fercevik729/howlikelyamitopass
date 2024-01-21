@@ -60,7 +60,13 @@ function SurveyResponse() {
   }, [loadwheel]);
 
   if (loading) {
-    return <CircularProgress />;
+    return (
+      <CircularProgress
+        sx={{
+          color: "white",
+        }}
+      />
+    );
   }
   if (error) {
     return (
@@ -100,8 +106,16 @@ export default function Results() {
   return (
     <main>
       <section id={"hero"} className={`flex flex-col py-36 items-center gap-4`}>
-        <h2 className="text-2xl mb-8 text-center">Your Results</h2>
-        <Suspense fallback={<CircularProgress color="inherit" />}>
+        <h2 className="text-3xl mb-8 text-center font-bold">Your Results</h2>
+        <Suspense
+          fallback={
+            <CircularProgress
+              sx={{
+                color: "white",
+              }}
+            />
+          }
+        >
           <SurveyResponse />
         </Suspense>
         <Link href={"/evaluate"} className="mt-8">

@@ -15,8 +15,6 @@ export async function POST(req: NextRequest) {
   */
   const { name, course } = await req.json();
 
-  console.log(`name: ${name}, course: ${course}`);
-
   const courseDescription = await prisma.course.findFirst({
     where: { title: course },
     select: { description: true },

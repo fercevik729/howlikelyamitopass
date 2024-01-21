@@ -1,6 +1,6 @@
 "use client";
 import { Course, CourseOffer, Professor } from "@/types/model";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface ProfessorChoiceProps {
@@ -49,34 +49,47 @@ export default function ProfessorChoice({
     <div>
       <div className={"flex flex-col gap-6"}>
         <ul className={"flex gap-3"}>
-          {coursesByQuarterYear &&
-            Object.keys(coursesByQuarterYear).map((quarterYear: string) => {
-              return (
-                <li key={quarterYear}>
-                  <Button
-                    variant={"outlined"}
-                    style={{
-                      backgroundColor:
-                        quarterSelected === quarterYear
-                          ? "white"
-                          : "transparent",
-                      color:
-                        quarterSelected === quarterYear ? "black" : "white",
-                      border: "1px solid white",
-                      borderRadius: "10px",
+          {courses.length > 0
+            ? Object.keys(coursesByQuarterYear).map((quarterYear: string) => {
+                return (
+                  <li key={quarterYear}>
+                    <Button
+                      variant={"outlined"}
+                      style={{
+                        backgroundColor:
+                          quarterSelected === quarterYear
+                            ? "white"
+                            : "transparent",
+                        color:
+                          quarterSelected === quarterYear ? "black" : "white",
+                        border: "1px solid white",
+                        borderRadius: "10px",
+                      }}
+                      onClick={() => {
+                        setQuarterSelected(quarterYear);
+                        setCourseSelected(undefined);
+                        setCourse("");
+                        setProfessorSelected(undefined);
+                      }}
+                    >
+                      {quarterYear}
+                    </Button>
+                  </li>
+                );
+              })
+            : [...Array(4)].map((_, i) => (
+                <li key={`skeleton ${i}`}>
+                  <Skeleton
+                    variant={"rounded"}
+                    width={100}
+                    height={30}
+                    animation="pulse"
+                    sx={{
+                      bgcolor: "#60a5fa",
                     }}
-                    onClick={() => {
-                      setQuarterSelected(quarterYear);
-                      setCourseSelected(undefined);
-                      setCourse("");
-                      setProfessorSelected(undefined);
-                    }}
-                  >
-                    {quarterYear}
-                  </Button>
+                  />
                 </li>
-              );
-            })}
+              ))}
         </ul>
         <div className={"flex gap-16"}>
           <div>
