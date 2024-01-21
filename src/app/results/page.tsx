@@ -74,34 +74,22 @@ function SurveyResponse() {
     <div className="flex flex-row justify-between">
       {loadwheel && <ResultsPercentage percentage={passRate * 100} />}
 
-      <div className="flex flex-col text-wrap w-2/5 mx-36">
-        <h2 className="text-2xl">Summary</h2>
+      <div className="flex flex-col text-wrap w-1/3 mx-36">
+        <h2 className="text-2xl mb-2">Summary</h2>
         <p>{summary}</p>
-
-        <h2> Pros</h2>
-        {pros?.map((pro: any) => {
-          return <p key={`Pro: ${pro}`}>{pro}</p>;
-        })}
       </div>
-      <div className="flex flex-col gap-2 mt-5 font-mono">
-        <h2> Cons</h2>
-        {cons?.map((con: any) => {
-          return <p key={`Con: ${con}`}>{con}</p>;
-        })}
-      </div>
-
       <div className="flex flex-row text-wrap w-1/3">
         <div className="flex flex-col pr-8">
           <h2 className="text-2xl mb-2">Pros</h2>
-          <p>Advice goes here</p>
-          <p>asjdklae</p>
-          <p>dajkdlean</p>
+          {pros?.map((pro: any) => {
+            return <p key={`Pro: ${pro}`}>{pro}</p>;
+          })}
         </div>
         <div className="flex flex-col border-l-2 pl-8">
           <h2 className="text-2xl mb-2">Cons</h2>
-          <p>Advice goes here</p>
-          <p>jdlakjsdsajld</p>
-          <p>askdjlajdle</p>
+          {cons?.map((con: any) => {
+            return <p key={`Con: ${con}`}>{con}</p>;
+          })}
         </div>
       </div>
     </div>
@@ -112,11 +100,11 @@ export default function Results() {
   return (
     <main>
       <section id={"hero"} className={`flex flex-col py-36 items-center gap-4`}>
-        <h2 className="text-2xl mb-8 text-center border-b-2">Your Results</h2>
-        <Suspense fallback={<CircularProgress color="primary" />}>
+        <h2 className="text-2xl mb-8 text-center">Your Results</h2>
+        <Suspense fallback={<CircularProgress color="inherit" />}>
           <SurveyResponse />
         </Suspense>
-        <Link href={"/evaluate"}>
+        <Link href={"/evaluate"} className="mt-8">
           <Button
             variant="outlined"
             style={{

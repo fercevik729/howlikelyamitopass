@@ -25,7 +25,7 @@ export default function ResultsPercentage(props: { percentage: number }) {
   return (
     <div className="flex flex-row items-center">
       <div className="flex flex-col">
-        <p className="text-6xl text-center font-bold">
+        <p className="text-6xl text-center font-bold pr-5">
           <CountUp end={props.percentage} duration={2} />%
         </p>
         <p className="text-center">chance you pass</p>
