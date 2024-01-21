@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import SkillsComponent from "@/components/SkillsComponent";
 import { redirect, useSearchParams } from "next/navigation";
 import Fade from "@mui/material/Fade";
-import { CircularProgress, Button } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import { APP_URL } from "@/config";
 import Link from "next/link";
 
@@ -201,22 +201,14 @@ function Skills() {
                 query: {
                   questions: questions.join(";;;"),
                   answers: answers.join(","),
-                  pros: pros.join(";;;"),
-                  cons: cons.join(";;;"),
                   course: Class,
                   professor: Professor,
+                  pros: pros.join(";;;"),
+                  cons: cons.join(";;;"),
                 },
               }}
             >
-              <Button
-                variant="outlined"
-                style={{
-                  color: "white",
-                  borderColor: "white",
-                }}
-              >
-                See Results
-              </Button>
+              See Results
             </Link>
           )}
         </Fade>

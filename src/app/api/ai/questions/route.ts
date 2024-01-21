@@ -11,6 +11,6 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({
-    questions: questions.split(";;;"),
+    questions: questions.split("\n"),
   });
 }

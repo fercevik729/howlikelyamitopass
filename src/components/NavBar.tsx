@@ -1,5 +1,6 @@
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 export default function NavBar() {
   return (
     <header className={"flex justify-between px-8 py-7 bg-[#2484FF]"}>
@@ -11,18 +12,30 @@ export default function NavBar() {
           }
         >
           <li>
-            <a href="#">About</a>
+            <Link href="/about" passHref>
+              <span>About</span>
+            </Link>
           </li>
           <li>
-            <a href="#">Credits</a>
+            <Link href="/credits" passHref>
+              <span>Credits</span>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://github.com/fercevik729/howlikelyamitopass"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub size={30} />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://discord.gg/5Bb2ubbBKQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaDiscord size={30} />
             </a>
           </li>
