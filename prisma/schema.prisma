@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -12,7 +9,7 @@ datasource db {
 
 model Course {
   id          Int              @id @default(autoincrement())
-  title       String
+  title       String           @unique
   description String?
   units       Int
   offered     QuarterOffered[]
@@ -21,19 +18,18 @@ model Course {
 model QuarterOffered {
   id         Int         @id @default(autoincrement())
   quarter    String
-  professors Professor[]
-  Course     Course?     @relation(fields: [courseId], references: [id])
   courseId   Int?
+  course     Course?     @relation(fields: [courseId], references: [id])
+  professors Professor[]
 }
 
 model Professor {
-  id               Int             @id @default(autoincrement())
-  name             String          @unique
+  id               Int              @id @default(autoincrement())
+  name             String           @unique
   tags             String[]
   rating           Float?
   wouldRepeat      Float?
   difficulty       Float?
   comments         String[]
-  quarter          QuarterOffered? @relation(fields: [quarterOfferedId], references: [id])
-  quarterOfferedId Int?
+  quarters         QuarterOffered[]
 }
