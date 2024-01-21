@@ -5,6 +5,7 @@ import SkillsComponent from "@/components/skills";
 import { redirect, useSearchParams } from "next/navigation";
 import Fade from "@mui/material/Fade";
 import Link from "next/link";
+import { Button } from "@mui/material";
 
 const questions = [
   "What grade did you get in CSE 13S?",
@@ -31,7 +32,6 @@ function Skills() {
   const [done, setDone] = useState(false);
   const [goback, setGoback] = useState(false);
 
-  useEffect(() => {});
   useEffect(() => {
     if (goback) redirect("/evaluate");
   }, [goback]);
@@ -95,7 +95,15 @@ function Skills() {
                 },
               }}
             >
-              See Results
+              <Button
+                variant="outlined"
+                style={{
+                  color: "white",
+                  borderColor: "white",
+                }}
+              >
+                See Results
+              </Button>
             </Link>
           )}
         </Fade>

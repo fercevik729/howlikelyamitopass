@@ -1,12 +1,17 @@
 import { Professor } from "@/types/model";
 import { Button, Typography } from "@mui/material";
+import Link from "next/link";
 import { useState } from "react";
 
 interface ProfessorStatsProps {
   professor: Professor;
+  course: string;
 }
 
-export default function ProfessorStats({ professor }: ProfessorStatsProps) {
+export default function ProfessorStats({
+  professor,
+  course,
+}: ProfessorStatsProps) {
   const [index, setIndex] = useState<number>(0);
 
   return (
@@ -83,6 +88,25 @@ export default function ProfessorStats({ professor }: ProfessorStatsProps) {
           >
             Next
           </Button>
+          <Link
+            href={{
+              pathname: "/skills",
+              query: {
+                professor: professor.name,
+                course,
+              },
+            }}
+          >
+            <Button
+              variant="outlined"
+              style={{
+                color: "white",
+                borderColor: "white",
+              }}
+            >
+              Help Me Pass!
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

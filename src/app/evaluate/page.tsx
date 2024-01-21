@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 
 export default function Evaluate() {
   const [data, setData] = useState<Course[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [course, setCourse] = useState<string>("");
   const [professorSelected, setProfessorSelected] = useState<
     Professor | undefined
   >(undefined);
@@ -14,17 +16,23 @@ export default function Evaluate() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const res = await fetch(`${APP_URL}/api/courses`);
 
         const courses: Course[] = await res.json();
         setData(courses);
       } catch (err) {
+        setLoading(false);
         console.log(err);
       }
     };
 
-    fetchData();
+    fetchData().then(() => setLoading(false));
   }, []);
+
+  if (loading) {
+    return <div className="p-10">Loading...</div>;
+  }
 
   return (
     <>
@@ -37,8 +45,11 @@ export default function Evaluate() {
           courses={data}
           professorSelected={professorSelected}
           setProfessorSelected={setProfessorSelected}
+          setCourse={setCourse}
         />
-        {professorSelected && <ProfessorStats professor={professorSelected} />}
+        {professorSelected && (
+          <ProfessorStats professor={professorSelected} course={course} />
+        )}
         {!professorSelected && <div className={"w-[450px]"}></div>}
       </div>
     </>

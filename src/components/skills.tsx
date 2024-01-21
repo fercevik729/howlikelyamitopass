@@ -29,7 +29,7 @@ export default function SkillsComponent(props: {
               <button
                 onClick={() => props.handleChoose(option)}
                 key={`${props.question} -> ${option}`}
-                className="transition-all duration-150 mx-4 w-20 h-12 rounded-md border-2 border-white hover:bg-white hover:text-black flex items-center justify-center"
+                className="transition-all duration-150 mx-4 w-20 h-10 rounded-md border-2 border-white hover:bg-white hover:text-black flex items-center justify-center"
               >
                 {option}
               </button>

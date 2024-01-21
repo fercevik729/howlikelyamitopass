@@ -12,14 +12,16 @@ const parser1 = StructuredOutputParser.fromZodSchema(
   z.object({
     prerequisites: z
       .array(z.string())
-      .describe("prerequisite courses needed to succeed, as a list"),
+      .describe("prerequisite courses needed to succeed, as a short list"),
     pros: z
       .array(z.string())
-      .describe("necessary concepts and skills to succeed, should be a list"),
+      .describe(
+        "necessary concepts and skills to succeed, should be a short list",
+      ),
     cons: z
       .array(z.string())
       .describe(
-        "information about the professor to be aware of, should be a list",
+        "information about the professor to be aware of, should be a short list",
       ),
   }),
 );
@@ -32,7 +34,7 @@ const chain1 = RunnableSequence.from([prompt1, model, parser1]);
 
 const prompt2 = PromptTemplate.fromTemplate(
   `Given prerequisite knowledge {prerequisites} and this pros and cons list: {pros}, {cons},
-  generate a list of 5 brief questions separated by that ask to rate a student's comfortability with topics
+  generate a list of only 5 brief questions separated by that ask to rate a student's comfortability with topics
   to gauge the potential performance of a student in the class. Assume the student has not taken the class yet. 
   Finally ask questions about what grade they got in the prerequisite classes on a scale of A - F.`,
 );

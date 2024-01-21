@@ -1,9 +1,10 @@
 "use client";
 import { APP_URL } from "@/config";
-import { Skeleton } from "@mui/material";
+import { Button, Skeleton } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
 import ResultsPercentage from "@/components/ResultsPercentage";
+import Link from "next/link";
 
 function SurveyResponse() {
   const searchParams = useSearchParams();
@@ -79,11 +80,22 @@ function SurveyResponse() {
 export default function Results() {
   return (
     <main>
-      <section id={"hero"} className={`flex flex-col py-36 items-center`}>
+      <section id={"hero"} className={`flex flex-col py-36 items-center gap-4`}>
         <h2 className="text-2xl mb-8 text-center">Your Results</h2>
         <Suspense fallback={<Skeleton animation="wave" />}>
           <SurveyResponse />
         </Suspense>
+        <Link href={"/evaluate"}>
+          <Button
+            variant="outlined"
+            style={{
+              color: "white",
+              borderColor: "white",
+            }}
+          >
+            Return to professors!
+          </Button>
+        </Link>
       </section>
     </main>
   );
