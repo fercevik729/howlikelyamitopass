@@ -1,5 +1,4 @@
 import Image from "next/image";
-import NavBar from "@/components/NavBar";
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 

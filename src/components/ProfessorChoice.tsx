@@ -34,7 +34,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
       setCoursesByQuarterYear(tempCoursesByQuarterYear);
     };
     getQuarter();
-  }, []);
+  }, [courses]);
 
   return (
     <div className={"max-w-[1000px] mt-16 mx-auto px-[25px]"}>
