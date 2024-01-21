@@ -30,7 +30,7 @@ export default function Evaluate() {
     <>
       <div
         className={
-          "flex gap-5 max-w-[1200px] mt-16 mx-auto px-[25px] justify-between"
+          "flex gap-5 max-w-[1200px] mt-10 mx-auto px-[25px] justify-between"
         }
       >
         <ProfessorChoice
