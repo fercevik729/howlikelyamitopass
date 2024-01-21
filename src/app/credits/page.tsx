@@ -29,7 +29,7 @@ export default function Results() {
         style={{
           color: "#cff",
           fontSize: "1.25rem",
-          maxWidth: "1250px",
+          maxWidth: "1300px",
           textAlign: "center",
         }}
       >
