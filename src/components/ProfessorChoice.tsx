@@ -16,7 +16,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
   const [coursesByQuarterYear, setCoursesByQuarterYear] =
     useState<CourseByQuarterYear>({});
   const [quarterSelected, setQuarterSelected] = useState<string>("");
-  const [courseSelected, setCourseSelected] = useState<Course>();
+  const [courseSelected, setCourseSelected] = useState<Course>(undefined);
   const [professorSelected, setProfessorSelected] = useState<string>("");
 
   useEffect(() => {
