@@ -5,13 +5,19 @@ import { useEffect, useState } from "react";
 
 interface ProfessorChoiceProps {
   courses: Course[];
+  professorSelected: Professor | undefined;
+  setProfessorSelected: any;
 }
 
 interface CourseByQuarterYear {
   [key: string]: Course[];
 }
 
-export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
+export default function ProfessorChoice({
+  courses,
+  professorSelected,
+  setProfessorSelected,
+}: ProfessorChoiceProps) {
   // Separate the courses into groups by quarter year
   const [coursesByQuarterYear, setCoursesByQuarterYear] =
     useState<CourseByQuarterYear>({});
@@ -19,9 +25,6 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
   const [courseSelected, setCourseSelected] = useState<Course | undefined>(
     undefined,
   );
-  const [professorSelected, setProfessorSelected] = useState<
-    Professor | undefined
-  >(undefined);
 
   useEffect(() => {
     const getQuarter = () => {
@@ -41,7 +44,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
   }, [courses]);
 
   return (
-    <div className={"max-w-[1000px] mt-16 mx-auto px-[25px]"}>
+    <div>
       <div className={"flex flex-col gap-6"}>
         <ul className={"flex gap-3"}>
           {coursesByQuarterYear &&
