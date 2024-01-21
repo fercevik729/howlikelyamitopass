@@ -4,31 +4,18 @@ import React, { Suspense, useEffect, useState } from "react";
 import SkillsComponent from "@/components/skills";
 import { redirect, useSearchParams } from "next/navigation";
 import Fade from "@mui/material/Fade";
+import Link from "next/link";
 
-const SKILLS = [
-  {
-    question: "What grade did you get in CSE 13S?",
-    options: ["A", "B", "C", "D", "F"],
-    circles: true,
-  },
-  {
-    question:
-      "Across all your classes, how many hours of discussion sections/office hours do you attend each week?",
-    options: ["None", "1-2", "3-5", "6-8", "9+"],
-    circles: false,
-  },
-  {
-    question: "On a scale from 1-10, how familiar are you with C++?",
-    options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-    circles: true,
-  },
+const questions = [
+  "What grade did you get in CSE 13S?",
+  "On a scale from 1-10, how familiar are you with C++?",
 ];
 
 function Skills() {
   const searchParams = useSearchParams();
-  const Class = searchParams.get("class");
-  const Professor = searchParams.get("professor");
-  if (!Class || !Professor) {
+  const course = searchParams.get("course");
+  const professor = searchParams.get("professor");
+  if (!course || !professor) {
     console.error(`Error: Class or professor not provided as search parameter`);
     redirect("/evaluate");
   }
@@ -44,9 +31,7 @@ function Skills() {
   const [done, setDone] = useState(false);
   const [goback, setGoback] = useState(false);
 
-  useEffect(() => {
-    if (done) redirect("/results");
-  }, [done]);
+  useEffect(() => {});
   useEffect(() => {
     if (goback) redirect("/evaluate");
   }, [goback]);
@@ -56,7 +41,7 @@ function Skills() {
     a.push(option);
     setAnswers(a);
     console.log("answers: ", a);
-    if (a.length === SKILLS.length) {
+    if (a.length === questions.length) {
       setDone(true);
       return;
     }
@@ -85,18 +70,34 @@ function Skills() {
   return (
     <main>
       <section id={"hero"} className={`flex flex-col py-36 items-center`}>
-        <p className="text-2xl mb-8 text-center">{`${Class} - ${Professor}`}</p>
+        <p className="text-2xl mb-8 text-center">{`${course} - ${professor}`}</p>
         <Fade in={shown} timeout={{ enter: 300, exit: 300 }}>
-          <div>
-            <SkillsComponent
-              question={SKILLS[num].question}
-              options={SKILLS[num].options}
-              circles={SKILLS[num].circles}
-              handleChoose={handleChoose}
-              handleBack={handleBack}
-              handleSkip={handleSkip}
-            />
-          </div>
+          {!done ? (
+            <div>
+              <SkillsComponent
+                question={questions[num]}
+                options={["Low", "Medium", "High"]}
+                circles={false}
+                handleChoose={handleChoose}
+                handleBack={handleBack}
+                handleSkip={handleSkip}
+              />
+            </div>
+          ) : (
+            <Link
+              href={{
+                pathname: "/results",
+                query: {
+                  questions: questions.join(";;;"),
+                  answers: answers.join(","),
+                  course,
+                  professor,
+                },
+              }}
+            >
+              See Results
+            </Link>
+          )}
         </Fade>
       </section>
     </main>
