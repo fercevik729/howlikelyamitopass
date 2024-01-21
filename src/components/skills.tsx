@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function SkillsComponent(props: {
-  title: string;
   question: string;
   options: string[];
   circles: boolean;
@@ -11,7 +10,6 @@ export default function SkillsComponent(props: {
 }) {
   return (
     <div className="w-full flex flex-col items-center">
-      <p className="text-2xl mb-8 text-center">{props.title}</p>
       <p className="text-lg mb-4 text-center">{props.question}</p>
       <div className="flex flex-col items-center h-12 w-full mb-4">
         <div className="flex-grow h-full flex justify-around">

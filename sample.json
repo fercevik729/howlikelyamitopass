@@ -1,0 +1,827 @@
+{
+  "CSE3": {
+    "title": " CSE3: Personal Computer Concepts: Software and Hardware ",
+    "description": "\nProvides an introduction to computers. Personal computing is emphasized, and students are introduced to word processing, spreadsheets, database management, graphics, and programming. Covers fundamentals of computing and current and future uses of computer technology, PC hardware, Windows operating system, applications software, networking and the Internet, and developments in the computer industry. Designed for students with little or no experience using computers. Students cannot receive credit for this course and Computer Science 2.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Gerald Moulds"] },
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
+    ]
+  },
+  "CSE12": {
+    "title": " CSE12: Computer Systems and Assembly Language and Lab ",
+    "description": "\nIntroduction to computer systems and assembly language and how computers compute in hardware and software. Topics include digital logic, number systems, data structures, compiling/assembly process, basics of the system software, and computer architecture. Course is 7 credits with integrated laboratories illustrating concepts covered in lecture. Note that CSE 12 assumes some programming experience. Students can show programming experience by taking one of the courses listed in the prerequisite list below or by taking the CSE python Test-out Exam: https://undergrad.soe.ucsc.edu/cse-20-testout-exam\u00a0(Formerly CSE 12 and CSE 12L)\n",
+    "units": "7",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Sagnik Nath", "Marcelo Siero"]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Marcelo Siero", "Heiner Litz"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Sagnik Nath", "Marcelo Siero"]
+      }
+    ]
+  },
+  "CSE13S": {
+    "title": " CSE13S: Comp Sys and C Program ",
+    "description": "\nC programming, command line, shell programming, editors, debuggers, source code control, and other tools. Basic computer systems, algorithm design and development, data types, program structures. Develops understanding of process model, compile-link-execute build cycle, language-machine interface, memory, and data representation. Students cannot receive credit for both CSE 13S and CSE 13E. Course is 7 units (5 + 2) with integrated laboratory.\n",
+    "units": "7",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Kishore Pusukuri", "Kishore Pusukuri", "Kerry Veenstra"]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Peter Alvaro", "Kerry Veenstra", "Peter Alvaro"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Kerry Veenstra", "Kishore Pusukuri"]
+      }
+    ]
+  },
+  "CSE16": {
+    "title": " CSE16: Applied Discrete Mathematics ",
+    "description": "\nIntroduction to applications of discrete mathematical systems. Topics include sets, functions, relations, graphs, predicate calculus, mathematical proof methods (induction, contraposition, contradiction), counting methods (permutations, combinations), and recurrences. Examples are drawn from computer science and computer engineering. Knowledge of computer programming is useful before taking this course. Students who do not have prior programming experience are strongly recommended to take CSE 20 or CSE 30 before taking this course. Prerequisite(s): MATH 19A or MATH 19B or MATH 11B or AM 11B or AM 15B or ECON 11B.\n",
+    "units": "5",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Alexandra Kolla", "John Musacchio"]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Owen Arden", "Allen Van Gelder"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Allen Van Gelder", "Patrick Tantalo"]
+      }
+    ]
+  },
+  "CSE20": {
+    "title": " CSE20: Beginning Programming in Python ",
+    "description": "\nProvides students with Python programming skills and the ability to design programs and read Python code. Topics include data types, control flow, methods and advanced functions, built-in data structures, and introduction to OOP. No prior programming experience is required. Students may not receive credit for CSE 20 after receiving credit for CSE 30. Students with prior programming experience (especially in Python) are encouraged to take\u00a0CSE\u00a0Testout Exam to be evaluated for their readiness to take\u00a0CSE\u00a030 directly:\u00a0https://undergrad.soe.ucsc.edu/cse-20-testout-exam. (Formerly CMPS 5P, Introduction to Programming in Python.)\n",
+    "units": "5",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": [
+          "Larissa Munishkina",
+          "Oswald Campesato",
+          "Cormac Flanagan"
+        ]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": [
+          "Larissa Munishkina",
+          "Benedict John Paten",
+          "Oswald Campesato"
+        ]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
+      }
+    ]
+  },
+  "CSE30": {
+    "title": " CSE30: Programming Abstractions: Python ",
+    "description": "\nIntroduction to software development in Python focusing on structuring software in terms of objects endowed with primitive operations. Introduces concepts and techniques via a sequence of concrete case studies. Coursework consists of programming assignments and a final examination.\n",
+    "units": "7",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
+      }
+    ]
+  },
+  "CSE40": {
+    "title": " CSE40: Machine Learning Basics: Data Analysis and Empirical Methods ",
+    "description": "\nThis course provides an introduction to the basic mathematical concepts and programming abstractions required for modern machine learning, data science and empirical science. \u00a0 The mathematical foundations include basic probability, linear algebra and optimization. \u00a0 The programming abstractions include data manipulation and visualization.\u00a0 The principles of empirical analysis, evaluation, critique and reproducibility will be emphasized. \u00a0 Mathematical and programming abstractions will be grounded in empirical studies including data-driven evidential reasoning, predictive modeling and causal analysis. Prerequisite(s): MATH 19B or MATH 20B, and CSE 30\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Lise Getoor"] },
+      { "quarter": "Winter 2024", "professors": ["Lise Getoor"] },
+      { "quarter": "Spring 2024", "professors": ["Yang Liu"] }
+    ]
+  },
+  "CSE80A": {
+    "title": " CSE80A: Universal Access: Disability, Technology, and Society ",
+    "description": "\nOverview of human-centered technology and of its potential for increasing the quality of life and independence of disabled individuals. A substantial portion of the course is devoted to studying physical, psychological, and psychosocial aspects of disability. Topics include: diversity and integration, legislation, accessibility, and universal design. (Formerly Assistive Technology and Universal Access) (General Education Code(s): PE-T Technology and Society, T7-Natural Sciences or Social Sciences.)\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Roberto Manduchi"] }]
+  },
+  "CSE80N": {
+    "title": " CSE80N: Introduction to Networking and the Internet ",
+    "description": "\nIntroduction to the evolution, technological basis, and services of the Internet, with descriptions of its underlying communications structure, routing algorithms, peer-to-peer hierarchy, reliability, and packet switching. Network security, mail, multimedia and data compression issues, HTML, and digital images. Students who have completed course 150 cannot receive credit for this course.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Rick Graziani"] },
+      { "quarter": "Winter 2024", "professors": ["Rick Graziani"] },
+      { "quarter": "Spring 2024", "professors": ["Christina Parsa"] }
+    ]
+  },
+  "CSE100L": {
+    "title": " CSE100L: Logic Design Laboratory ",
+    "description": "\nLaboratory sequence illustrating topics covered in course 100. Two 2-hour laboratory sessions per week. Weekly laboratory assignments which require the use of the oscilloscopes, TTL circuits, computer-aided design and simulation tools, and programmable logic. Students are billed a materials fee. Previous or concurrent enrollment in CSE 100 is required.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Martine Schlag"] },
+      { "quarter": "Winter 2024", "professors": ["Martine Schlag"] },
+      { "quarter": "Spring 2024", "professors": ["Martine Schlag"] }
+    ]
+  },
+  "CSE100": {
+    "title": " CSE100: Logic Design ",
+    "description": "\nBoolean algebra, logic minimization, finite-state machine design, sequential circuits, common logic elements, programmable logic devices, and an introduction to system level design. The electrical behavior of circuits including three state outputs, propagation delay, logic levels, and fanout. Previous or concurrent enrollment in CSE 100L is required.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Martine Schlag"] },
+      { "quarter": "Winter 2024", "professors": ["Martine Schlag"] },
+      { "quarter": "Spring 2024", "professors": ["Martine Schlag"] }
+    ]
+  },
+  "CSE101": {
+    "title": " CSE101: Introduction to Data Structures and Algorithms ",
+    "description": "\nIntroduction to abstract data types and basics of algorithms. Linked lists, stacks, queues, hash tables, trees, heaps, and graphs will be covered. Students will also be taught how to derive big-Oh analysis of simple algorithms. All assignments will be in C/C++. (Formerly Computer Science 101 Algorithms and Abstract Data Types.) Prereqs: CSE 12 or BME 160; CSE 13E or ECE 13 or CSE 13S; and CSE 16; and CSE 30; and MATH 11B or MATH 19B or MATH 20B or AM 11B.\n",
+    "units": "5",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Patrick Tantalo", "Allen Van Gelder", "Alex Pang"]
+      },
+      { "quarter": "Winter 2024", "professors": ["Patrick Tantalo"] },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Niloofar Montazeri", "James Davis"]
+      }
+    ]
+  },
+  "CSE101M": {
+    "title": " CSE101M: Mathematical Thinking for Computer Science ",
+    "description": "\n",
+    "units": "Introduction",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Daniel Fremont"] }]
+  },
+  "CSE102": {
+    "title": " CSE102: Introduction to Analysis of Algorithms ",
+    "description": "\nMethods for the systematic construction and mathematical analysis of algorithms. Order notation, the RAM model of computation, lower bounds, and recurrence relations are covered. The algorithm design techniques include divide-and-conquer, branch and bound, and dynamic programming. Applications to combinatorial, graph, string, and geometric algorithms.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Delbert Bailey"] },
+      { "quarter": "Winter 2024", "professors": ["Vaggos Chatziafratis"] },
+      { "quarter": "Spring 2024", "professors": ["Patrick Tantalo"] }
+    ]
+  },
+  "CSE103": {
+    "title": " CSE103: Computational Models ",
+    "description": "\nVarious representations for regular languages, context-free grammars, normal forms, simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable problems, the P-NP question. \n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Daniel Fremont"] },
+      { "quarter": "Winter 2024", "professors": ["Delbert Bailey"] },
+      { "quarter": "Spring 2024", "professors": ["Delbert Bailey"] }
+    ]
+  },
+  "CSE104": {
+    "title": " CSE104: Computability and Computational Complexity ",
+    "description": "\nTuring machines, general phase-structure grammars, the Chomsky hierarchy, recursive functions, diagonalization, the Halting problem, computability and unsolvability, computational complexity, time and space bounds, NP-completeness with emphasis on reductions between problems from various areas. \n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Alexandra Kolla"] }]
+  },
+  "CSE105": {
+    "title": " CSE105: Modern Algorithmic Toolbox ",
+    "description": "\n",
+    "units": "Undergraduate",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Vaggos Chatziafratis"] }
+    ]
+  },
+  "CSE107": {
+    "title": " CSE107: Probability and Statistics for Engineers (formerly Math Systems: Stochastic) ",
+    "description": "\nIntroduction to fundamental tools of stochastic analysis. Probability, conditional probability; Bayes Theorem; random variables and transforms; independence; Bernnoulli trials. Statistics, inference from limited data; outcomes of repeated experiments; applications to design; assessment of relative frequency and probability; law of large numbers; precision of measurements. Elements of stochastic processes, Poisson processes; Markov chains. Students cannot receive credit for this course and Applied Mathematics and Statistics 131. \n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Patrick Tantalo"] },
+      { "quarter": "Winter 2024", "professors": ["Patrick Tantalo"] },
+      { "quarter": "Spring 2024", "professors": ["John Musacchio"] }
+    ]
+  },
+  "CSE108": {
+    "title": " CSE108: Algorithmic Foundations of Cryptography ",
+    "description": "\nIndividual Study or Research\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Ioannis Demertzis"] }
+    ]
+  },
+  "CSE110A": {
+    "title": " CSE110A: Fundamentals of Compiler Design I ",
+    "description": "\nAn introduction to the basic techniques used in compiler design. Topics include compiler structure, symbol tables, regular expressions and languages, finite automata, lexical analysis, context-free languages, LL(1), recursive descent, LALR(1), and LR(1) parsing; and attribute grammars as a model of syntax-directed translation. Students use compiler building tools to construct a working compiler.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Tyler Sorensen"] }
+    ]
+  },
+  "CSE111": {
+    "title": " CSE111: Advanced Programming ",
+    "description": "\nAn introduction to object-oriented techniques of software development including data abstraction, inheritance, polymorphism, and object-oriented design. Extensive practice using a computer to solve problems, including construction of graphical user interfaces and a multithreaded client/server applications. Prerequisite(s): CSE 15 and CSE 15L, or CSE 13S and CMPM 35; or CSE 13E and CMPM 35, or CSE 101.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Staff"] }]
+  },
+  "CSE113": {
+    "title": " CSE113: Parallel Programming ",
+    "description": "\nIntroduction to parallel and concurrent programming. Topics include: types of parallel computers and programming platforms; design, implementation, and optimization of programs for parallel and multicore processors; basic and advanced programming techniques; performance analysis and load balancing; and selected parallel algorithms. Prerequisite(s): Computer Engineering 12 and 12L and Computer Science 101. Computer Engineering 110 or 112 recommended.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Tyler Sorensen"] }
+    ]
+  },
+  "CSE114A": {
+    "title": " CSE114A: Foundations of Programming Languages ",
+    "description": "\nProblem solving emphasizing recursion, data abstraction, and higher-order functions. Introduction to types and type checking, modular programming, and reasoning about program correctness. Prerequisite(s): CSE or CMPS 101\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Owen Arden"] },
+      { "quarter": "Winter 2024", "professors": ["Cormac Flanagan"] },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Lindsey Kuper", "Allen Van Gelder"]
+      }
+    ]
+  },
+  "CSE115D": {
+    "title": " CSE115D: Software Design Project - Accelerated ",
+    "description": "\nAccelerated version of CSE 115B and 115C. Students work in teams to develop, test,\u00a0document and deploy a substantial software project.\u00a0Each team gives a formal presentation and demonstration of their project.\u00a0Credit cannot be received for both CSE 115D and any part of the 115B-115C sequence. Prerequisite/s: CSE 115A\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Richard Jullig"] }]
+  },
+  "CSE115A": {
+    "title": " CSE115A: Introduction to Software Engineering ",
+    "description": "\nEmphasizes the characteristics of well-engineered software systems. Topics include requirements analysis and specification, design, programming, verification and validation, maintenance, and project management. Practical and research methods are studied. Imparts an understanding of the steps used to effectively develop computer software. (Formerly Software Methodology.)\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Richard Jullig"] },
+      { "quarter": "Winter 2024", "professors": ["Richard Jullig"] },
+      { "quarter": "Spring 2024", "professors": ["Richard Jullig"] }
+    ]
+  },
+  "CSE115B": {
+    "title": " CSE115B: Software Design Project ",
+    "description": "\nStudents in teams specify, design, construct, test, and document a complete software system in a specialized application domain. Class time is spent in technical discussions and ongoing design reviews. A formal presentation and demonstration of each project is required. An organizational meeting will be held during the preceding quarter. Projects may be drawn from industry and campus research groups.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Richard Jullig"] }
+    ]
+  },
+  "CSE115C": {
+    "title": " CSE115C: Software Design Project II ",
+    "description": "\nContinuation of course 116. Students work in teams to develop, test, document, and deploy a substantial software project. Teams give a formal presentation and demonstration of each project.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Richard Jullig"] }
+    ]
+  },
+  "CSE120": {
+    "title": " CSE120: Computer Architecture ",
+    "description": "\nIntroduction to computer architecture including examples of current approaches and the effect of technology and software. Computer performance evaluation, basic combinatorial and sequential digital components, different instruction set architectures with a focus on the MIPS ISA and RISC paradigm. Evolution of CPU microarchitecture from single-cycle to multi-cycle pipelines, with overview of super-scalar, multiple-issue and VLIW. Memory system, cache, virtual memory and relationship between memory and performance. Evolution of PC system architecture. May include advanced topics, such as parallel processing, MIMD, and SIMD.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Heiner Litz", "Sagnik Nath"] },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Yuanchao Xu", "Sagnik Nath"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Scott Beamer", "Sagnik Nath"]
+      }
+    ]
+  },
+  "CSE121": {
+    "title": " CSE121: Embedded System Design ",
+    "description": "\nThe design and use of microprocessor-based embedded systems. Covers microprocessor and microcontroller architecture, programming techniques, bus and memory organization, DMA, timing issues, interrupts, peripheral devices, serial and parallel communication, and interfacing to analog and digital systems. (Formerly offered as Microprocessor System Design, and formerly\u00a0two courses,\u00a0CMPE\u00a0121 and CMPE 121L.) Prerequisite(s): CSE 12, CSE 12L, CSE 100, CSE 100L; and CSE 13E or CSE 13S or CSE 15 and CSE 15L; and ECE 101, ECE 101L, PHYS 5C and PHYS 5N.\n",
+    "units": "7",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Marcelo Siero"] },
+      { "quarter": "Spring 2024", "professors": ["Jose Renau"] }
+    ]
+  },
+  "CSE122": {
+    "title": " CSE122: Introduction to VLSI Digital System Design ",
+    "description": "\nIntroduces very large scale integrated (VLSI) custom integrated circuits. Topics include: semiconductor manufacturing, logic families, field-effect transistors (FETs), interconnect models, simulation, and circuits. Introduces the design flow from logic design to layout with a focus on high performance and low power. Students cannot receive credit for this course and course 222.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Sagnik Nath"] }]
+  },
+  "CSE123A": {
+    "title": " CSE123A: Engineering Design Project I ",
+    "description": "\nFirst of a two-course sequence that is the culmination of the engineering program. Students apply knowledge and skills gained in elective track to complete a major design project. Students complete research, specification, planning, and procurement for a substantial project. Includes technical discussions, design reviews, and formal presentations; engineering design cycle, engineering teams, and professional practices. Formal technical specification of the approved project is presented to faculty. Students are billed a materials fee. Prerequisite(s): Computer Engineering 121; previous or concurrent enrollment in Computer Engineering 185; permission of department and instructor.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["David Harrison"] }]
+  },
+  "CSE123B": {
+    "title": " CSE123B: Engineering Design Project II ",
+    "description": "\nSecond of two-course sequence in engineering system design. Students fully implement and test system designed and specified in course 123A. Formal written report, oral presentation, and demonstration of successful project to review panel of engineering faculty required. Students are billed a materials fee.\n",
+    "units": "7",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["David Harrison"] }]
+  },
+  "CSE125": {
+    "title": " CSE125: Logic Design with Verilog ",
+    "description": "\nVerilog digital logic design with emphasis on ASIC and FPGA design. Students design and verify large-scale systems. Assignments and project use the Verilog Hardware Description Language with emphasis on verification and high-frequency ASIC/FPGA targets. May be taught in conjunction with CSE 225 (Formerly Computer Engineering 125.) Prerequisite(s): CSE 100 and CSE 100L and CSE 120\n",
+    "units": "7",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Dustin Richmond"] }]
+  },
+  "CSE130": {
+    "title": " CSE130: Principles of Computer Systems Design ",
+    "description": "\nCovers the principles governing computer-systems design and complexity; familiarity with memory, storage, and networking; concurrency and synchronization; layering (abstraction and modularity); naming; client-server and virtualized system models; and performance. Requires significant programming projects demonstrating mastery of these concepts.\n",
+    "units": "5",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Andrew Quinn", "Kerry Veenstra"]
+      },
+      { "quarter": "Winter 2024", "professors": ["Kerry Veenstra"] },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Kerry Veenstra", "Liting Hu"]
+      }
+    ]
+  },
+  "CSE132": {
+    "title": " CSE132: Computer Security ",
+    "description": "\nIntroduction to computer security (including selected topics in network security). Access control. Security in programming languages. Basic cryptography. Security protocols.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Alvaro Cardenas"] }
+    ]
+  },
+  "CSE134": {
+    "title": " CSE134: Embedded Operating Systems ",
+    "description": "\nDetailed exploration of the internal design of an embedded operating systems kernel. Covers kernel structure and organization, device drivers, I/O systems, file systems, memory management, and security. Students complete significant programming projects that extend or modify existing operating systems. Prerequisite(s): CSE 120 and CSE 130\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Andrew Quinn"] }]
+  },
+  "CSE138": {
+    "title": " CSE138: Distributed Systems ",
+    "description": "\nCovers topics in distributed computing including communication, naming, synchronization, consistency and replication, fault tolerance, and security. Examples drawn from peer-to-peer systems, online gaming, the World Wide Web; other systems also used to illustrate approaches to these topics. Students implement simple distributed systems over the course of the quarter.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Liting Hu"] },
+      { "quarter": "Winter 2024", "professors": ["Lindsey Kuper"] }
+    ]
+  },
+  "CSE140": {
+    "title": " CSE140: Artificial Intelligence ",
+    "description": "\nIntroduction to the contemporary concepts and techniques of artificial intelligence, including any or all of: machine perception and inference, machine learning, optimization problems, computational methods and models of search, game playing and theorem proving. Emphasis may be on any formal method of perceiving, learning, reasoning, and problem solving which proves to be effective. This includes both symbolic and neural network approaches to artificial intelligence. Issues discussed include symbolic versus nonsymbolic methods, local versus global methods, hierarchical organization and control, and brain modeling versus engineering approaches. Lisp or Prolog may be introduced. Involves one major project or regular programming assignments.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Leilani Gilpin"] },
+      { "quarter": "Spring 2024", "professors": ["Niloofar Montazeri"] }
+    ]
+  },
+  "CSE142": {
+    "title": " CSE142: Machine Learning and Data Mining ",
+    "description": "\n",
+    "units": "Introduction",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Razvan Marinescu"] },
+      { "quarter": "Winter 2024", "professors": ["Razvan Marinescu"] },
+      { "quarter": "Spring 2024", "professors": ["Xin Wang"] }
+    ]
+  },
+  "CSE143": {
+    "title": " CSE143: Introduction to Natural Language Processing ",
+    "description": "\nIntroduces the theory and practice of natural language processing (NLP)-- the creation of computer programs that can understand, generate, and learn natural language. Introduces the three major subfields of NLP: syntax (the structure of a sentence); semantics (the explicit meaning of a single sentence); and pragmatics (the implicit meaning of a sentence when it is used in a specific discourse). Projects focus on the techniques useful for a particular application area, alternating in different years. Project application areas include information extraction, narrative understanding, sentiment analysis, dialogue systems, and question answering.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Jeffrey Flanigan"] }
+    ]
+  },
+  "CSE144": {
+    "title": " CSE144: Applied Machine Learning: Deep Learning ",
+    "description": "\n",
+    "units": "Provides",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Yuyin Zhou"] },
+      { "quarter": "Winter 2024", "professors": ["Cihang Xie"] },
+      { "quarter": "Spring 2024", "professors": ["Yi Zhang"] }
+    ]
+  },
+  "CSE146": {
+    "title": " CSE146: Ethics & Algorithms ",
+    "description": "\nThis course provides an introduction to data-driven and algorithmic decision making, and ethical frameworks for evaluating automated systems.\u00a0There will be an emphasis on algorithmic literacy, critical analysis, and fundamental limitations of automated decision making.\u00a0We will cover concepts including predictive and causal modeling.\u00a0We will discuss bias, fairness, interpretability, privacy, and accountability.\u00a0Finally we will discuss notions of autonomy and algorithmic auditing.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Lise Getoor"] }]
+  },
+  "CSE150": {
+    "title": " CSE150: Introduction to Computer Networks ",
+    "description": "\nAddresses issues arising in organizing communications among autonomous computers. Network models and conceptual layers; Internet-working; characteristics of transmission media; switching techniques (packet switching, circuit switching, cell switching); medium access control (MAC) protocols and local area networks; error-control strategies and link-level protocols; routing algorithms for bridges and routers; congestion control mechanisms; transport protocols; application of concepts to practical wireless and wireline networks and standard protocol architectures. Students who have completed course 80N can take this course for credit.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Christina Parsa"] },
+      { "quarter": "Winter 2024", "professors": ["Christina Parsa"] },
+      { "quarter": "Spring 2024", "professors": ["Chen Qian"] }
+    ]
+  },
+  "CSE151L": {
+    "title": " CSE151L: Advanced Computer Networks Laboratory ",
+    "description": "\nLaboratory illustrating the concepts covered in course 151: provides students with hands-on experience in computer networks.\n",
+    "units": "2",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Rick Graziani"] }]
+  },
+  "CSE151": {
+    "title": " CSE151: Advanced Computer Networks (formerly Network Administration) ",
+    "description": "\nProvides an in-depth coverage of fundamental topics introduced in course 150 including routing, transport, and internetworking. Also introduces advanced concepts not covered in course 150 including wireless, application-layer services, security, etc. (Formerly Network Administration.)\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Rick Graziani"] }]
+  },
+  "CSE156L": {
+    "title": " CSE156L: Network Programming Laboratory ",
+    "description": "\nLaboratory sequence illustrating concepts taught in course 156. Students learn use of network programming tools and methods via programming exercises.\n",
+    "units": "2",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Mehrdad Parsa"] }]
+  },
+  "CSE156": {
+    "title": " CSE156: Network Programming ",
+    "description": "\nMethods and tools used for network programming. Topics include: operating system (OS) support for network protocols; inter-process communication (IPC) facilities, such as pipes, sockets, and remote procedure call (RPC); design of client and server sides of network applications; network security; and programming projects.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Mehrdad Parsa"] }]
+  },
+  "CSE160": {
+    "title": " CSE160: Introduction to Computer Graphics ",
+    "description": "\nIntroduces techniques of modeling, transformation, and rendering for computer-generated imagery. Topics: 2D/3D primitives, projections, matrix composition, and shading algorithms. Programming assignments and major project required. Students cannot receive credit for both this course and course 260 in quarters when they are offered concurrently. Mastery of materials in the prerequisite courses will be verified with a quiz or assignment during the first two weeks of the course.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Alex Pang"] },
+      { "quarter": "Spring 2024", "professors": ["James Davis"] }
+    ]
+  },
+  "CSE164": {
+    "title": " CSE164: Computer Vision ",
+    "description": "\nThis course will introduce both the basic computer vision concepts and the advanced deep learning methods for computer vision. Topics include fundamentals of image formation, camera imaging geometry, early-/mid-/high-level vision, basics of machine learning and convolutional neural networks for vision. Prereq(s): CSE 144\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Cihang Xie"] }]
+  },
+  "CSE168": {
+    "title": " CSE168: Introduction to Augmented Reality and Virtual Reality ",
+    "description": "\n",
+    "units": "Covers",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Alex Pang"] }]
+  },
+  "CSE180": {
+    "title": " CSE180: Database Systems I ",
+    "description": "\nIntroduction to the concepts, approaches, tools, and methodology of database design. Covers the entity-relationship model, the relational model, relational algebra, relational calculus, commercial languages (such as SQL and QBE), functional dependencies, normal forms, and design theory. Other topics may include knowledge-bases, constraint databases, and alternative database models.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Sheldon Finkelstein"] },
+      { "quarter": "Winter 2024", "professors": ["Sheldon Finkelstein"] }
+    ]
+  },
+  "CSE181": {
+    "title": " CSE181: Database Systems II ",
+    "description": "\nIntroduction to the architecture and implementation of database systems. Topics covered include data storage, tree and hash indexes, storage management, query evaluation and optimization, transaction management, concurrency control, recovery, and XML data management. Prerequisite(s): CSE 180 and CSE 130.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Sheldon Finkelstein"] }
+    ]
+  },
+  "CSE182": {
+    "title": " CSE182: Introduction to Database Management Systems ",
+    "description": "\nConcepts, approaches, tools, and methodology of database design. Topics include the entity-relationship model; the relational data model; normal forms; commercial languages such as SQL (SQL constraints, SQL triggers, and update languages); query-by-example (QBE); XML data model, and XML query language (XQuery); as well as relational database-management support for XML and object-relational features in database-management systems. Involves a database -application development project. Prerequisite(s): CSE 16 or BME 160; CSE 15 and CSE 15L or CSE 13E or CSE 13S or ECE 13. Course intended for non-majors; computer science majors should enroll in CSE 180.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Sheldon Finkelstein"] }
+    ]
+  },
+  "CSE183": {
+    "title": " CSE183: Web Applications ",
+    "description": "\n",
+    "units": "The",
+    "offered": [
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Luca de Alfaro", "Massimo Di Pierro"]
+      }
+    ]
+  },
+  "CSE185E": {
+    "title": " CSE185E: Technical Writing for Computer Science and Engineering ",
+    "description": "\nWriting by engineers and computer scientists, not to general audiences, but to engineers, engineering managers, and technical writers. Exercises include job application and resume, in-code documentation, algorithm description, naive-user documentation, library puzzle, survey article, proposal, progress report, formal technical report, and oral presentation. Students cannot receive credit for this course and CSE 185S. (Formerly Computer Engineering 185)\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Gerald Moulds"] },
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
+    ]
+  },
+  "CSE185S": {
+    "title": " CSE185S: Technical Writing and Communication in Computer Science ",
+    "description": "\nWriting by engineers and computer scientists, not to general audiences, but to engineers, engineering managers, and technical writers. Exercises include job application and resume, in-code documentation, algorithm description, naive-user documentation, library puzzle, survey article, proposal, progress report, formal technical report, and oral presentation. Students cannot receive credit for this course and CSE 185E. (Formerly Computer Engineering 185)\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
+    ]
+  },
+  "CSE186": {
+    "title": " CSE186: Full Stack Web Development I ",
+    "description": "\nThis course examines current uses of the World-Wide Web for delivery of the sophisticated interactive applications we use daily. Web Applications offer several advantages over traditional, locally installable binaries including heterogeneous deployment, instantaneous access, continuous updates, and the possibility of collaboration at scale. These Full Stack Web Applications are typically more complex than their traditional counterparts, requiring the seamless integrating of numerous related technologies if end users are to have a productive experience and the system is to remain robust, performant, and secure. Prerequisite(s): CSE 15 and CSE 15L, or CSE 30, or CSE 101.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["David Harrison"] }]
+  },
+  "CSE187": {
+    "title": " CSE187: Full Stack Web Development II ",
+    "description": "\nThis course continues the examination of current uses of the World-Wide Web for delivery of the sophisticated interactive applications we use daily. Advanced development techniques are examined with continued emphasis on automated testing. A sizable team project is undertaken to introduce topics including, but not limited to, automated build pipelines, penetration testing, API versioning, and deployment at scale.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["David Harrison"] }]
+  },
+  "CSE200": {
+    "title": " CSE200: Research and Teaching in Computer Science and Engineering ",
+    "description": "\nBasic teaching techniques for teaching assistants, including responsibilities and rights of teaching assistants, resource materials, computer security, leading discussion or lab sessions, presentation techniques, maintaining class records, electronic handling of homework, and grading. The course examines research and professional training, including use of the library and online databases, technical typesetting, writing journal and conference papers, publishing in computer science and computer engineering, giving talks in seminars and conferences, and ethical issues in science and engineering. Required for all teaching assistants.\n",
+    "units": "3",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Harikrishna Kuttivelil"]
+      }
+    ]
+  },
+  "CSE205": {
+    "title": " CSE205: Logic in Computer Science ",
+    "description": "\nThe applications and uses of formal systems to computer science. Covers the syntax and semantics of propositional logic and first-order logic, normal forms, soundness and completeness theorems, Herbrand's theorem, unification and resolution, foundations of logic programming, automated theorem proving. Other topics may include deductive databases, database query languages, nonmonotonic reasoning.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Allen Van Gelder"] }
+    ]
+  },
+  "CSE208": {
+    "title": " CSE208: Introduction to Information Theory ",
+    "description": "\nAn introduction to information theory including topics such as entropy, relative entropy, mutual information, asymptotic equipartition property, channel capacity, differential entropy, rate distortion theory, and universal source coding. Prerequisite(s): Computer Engineering 107, or Applied Mathematics and Statistics 131 or equivalent course, or permission of instructor.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Yu Zhang"] }]
+  },
+  "CSE209A": {
+    "title": " CSE209A: Modern Algorithmic Toolbox ",
+    "description": "\n",
+    "units": "Graduate",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Vaggos Chatziafratis"] }
+    ]
+  },
+  "CSE210A": {
+    "title": " CSE210A: Programming Languages ",
+    "description": "\nCovers current issues in programming languages. Language topics include object oriented, concurrent, functional, and logic programming, and other programmable applications such as symbolic manipulators and simulation.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Owen Arden"] }]
+  },
+  "CSE211": {
+    "title": " CSE211: Compiler Design ",
+    "description": "\nAdvanced study of compiler implementation. Topics include compiler structure back end, run-time environments, storage management, garbage collection, register allocation, code generation, basic blocks, control flow, data flow, local and global optimization, interpretation, machine code generation. Students may not receive credit for this course and course 104B. Taught in conjunction with 104B. Prerequisite(s): Enrollment restricted to graduate students.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Tyler Sorensen"] }
+    ]
+  },
+  "CSE215": {
+    "title": " CSE215: Design and Implementation of Database Systems ",
+    "description": "\nAdvanced course in implementation techniques for database systems. For students who wish to do research in databases or to learn more about large-scale data processing. Topics include: indexing of complex data; techniques for high-volume concurrency control; query processing and optimization; database recovery; parallel database system architectures; database systems for streaming data; approximate query answering. Additional topics may include: self-managing database systems; advanced query optimization techniques; and query processing techniques for semi-structured data. Prerequisite(s): Enrollment is restricted to graduate students. Undergraduates that have taken CSE 181 may enroll. A basic knowledge of databases, similar to the content of CSE 180, is recommended. (Formerly CMPS 278.)\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Sheldon Finkelstein"] }
+    ]
+  },
+  "CSE216": {
+    "title": " CSE216: Formal Methods ",
+    "description": "\nMathematical techniques for analyzing systems to prove rigorous guarantees about their behavior. Fundamental algorithms for and advanced topics in modeling, specification, verification, correct-by-construction synthesis, and testing. Applications to hardware/software design, cybersecurity, robotics, machine learning.  CSE 103 or equivalent recommended. Enrollment restricted to graduate students. Undergraduate may enroll by permission of instructor.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Daniel Fremont"] }]
+  },
+  "CSE222A": {
+    "title": " CSE222A: VLSI Digital System Design ",
+    "description": "\nAdvanced Very Large Scale Integrated (VLSI) custom integrated circuits. Topics include: semiconductors; field-effect transistors (FETs); circuits; and interconnect simulation, along with advanced material on manufacturability, variability, short-channel devices, and non-volatile memories. Students cannot receive credit for this course and course 122. (Formerly VLSI Digital System Design.)\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Sagnik Nath"] }]
+  },
+  "CSE225": {
+    "title": " CSE225: Introduction to ASIC Systems Design ",
+    "description": "\nVerilog digital logic design with emphasis on ASIC and FPGA design. Students design and verify large-scale systems. Assignments and project use the Verilog Hardware Description Language with emphasis on verification and high-frequency ASIC/FPGA targets. Course may be taught in conjunction with CSE 125 (Formerly Computer Engineering 225).\n",
+    "units": "7",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Dustin Richmond"] }]
+  },
+  "CSE228A": {
+    "title": " CSE228A: Agile Hardware Design ",
+    "description": "\nAgile Hardware Design techniques take the best of software engineering methods and apply them to improve hardware design productivity. Agile approaches not only reduce the time to solution, but they can also produce solutions which are better tailored for their target problems. In this synchronous in-person course, we cover these techniques while taking advantage of the Chisel hardware design language which brings the strengths of functional object-oriented programming to hardware design. The course will consist of engaging lectures (intermixed coding demos and guest speakers) and progressive design assignments that culminate in a small project. Prereq(s): Equivalent experience in at least 2 of the following 3 areas: logic design (Verilog/VHDL e.g. CSE 100/L or 125/L), computer architecture (CSE 120/220), advanced programming (functional, object oriented, etc...). Open to advanced undergrad students with instructor consent.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Scott Beamer"] }]
+  },
+  "CSE231": {
+    "title": " CSE231: Advanced Operating Systems ",
+    "description": "\nA detailed study of the issues involved in operating systems design and implementation. Readings cover current research topics and systems of historical significance. Topics include (but are not restricted to) process and memory management, protection, security, synchronization, performance evaluation, file systems, distributed systems.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Andrew Quinn"] }]
+  },
+  "CSE232": {
+    "title": " CSE232: Distributed Systems ",
+    "description": "\nOverview of research topics in distributed computer systems. Topics may include communication paradigms, process management, naming, synchronization and coordination, consistency and replication, fault tolerance, and security. Examples include distributed operating systems, distributed file and object systems, distributed document systems, and peer-to-peer systems.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Lindsey Kuper"] },
+      { "quarter": "Spring 2024", "professors": ["Mohsen Lesani"] }
+    ]
+  },
+  "CSE233": {
+    "title": " CSE233: Advanced Computer Security ",
+    "description": "\nOverview of research topics in computer and network security. Topics may include cryptographic operations, security properties and policies, authentication and access control, attacks on computer systems and defenses against them, security in programming languages, and network protocols for security.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Alvaro Cardenas"] }
+    ]
+  },
+  "CSE240": {
+    "title": " CSE240: Artificial Intelligence ",
+    "description": "\nPrepares students for doing research in artificial intelligence. Major topics covered are search and heuristics, knowledge representation, planning, deduction and inference, reinforcement learning, associative pattern retrieval, and adaptive search. Discussion includes current research issues in AI problem-solving methods. Individualized projects.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Leilani Gilpin"] }
+    ]
+  },
+  "CSE242": {
+    "title": " CSE242: Machine Learning ",
+    "description": "\nIntroduction to machine learning algorithms. Covers learning models from fields of statistical decision theory and pattern recognition, artificial intelligence, and theoretical computer science. Topics include classification learning and the Probably Approximately Correct (PAC) learning framework, density estimation and Bayesian learning, EM, regression, and online learning. Provides an introduction to standard learning methods such as neural networks, decision trees, boosting, nearest neighbor, and support vector machines. Requirements include one major experimental learning project or theoretical paper. Students may not receive credit for both this course and course 142.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Spring 2024", "professors": ["Razvan Marinescu"] }
+    ]
+  },
+  "CSE244A": {
+    "title": " CSE244A: Foundations of Deep Learning ",
+    "description": "\nThis course provides foundations of deep learning algorithms and principles. Topics include neural networks, deep learning principles, deep learning architectures such as convolutional neural networks and recurrent neural networks, autoencoders, generative adversarial networks, and reinforcement learning.\u00a0\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Cihang Xie"] }]
+  },
+  "CSE248": {
+    "title": " CSE248: Foundations of Data Science ",
+    "description": "\nExamines the mathematical and algorithmic foundations of data science including high dimensional data, probabilistic inequalities, dimensionality reduction, correlation detection, streaming algorithms, and clustering.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Yang Liu"] }]
+  },
+  "CSE250A": {
+    "title": " CSE250A: Computer Networks ",
+    "description": "\nIssues resulting from organizing communication among autonomous computers. Includes network models and switching techniques; medium access control protocols and local area networks; error control and retransmission strategies; routing algorithms and protocols; congestion control mechanisms and end-to-end protocols; application-level protocols; and application of concepts to wireless and wireline networks, with emphasis on the Internet.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Chen Qian"] }]
+  },
+  "CSE257": {
+    "title": " CSE257: Wireless and Mobile Networks ",
+    "description": "\nAn interdisciplinary course on wireless communication and mobile computing. Covers the physical aspects of wireless communication but emphasizes higher protocol layers. Topics include cellular networks, packet radio and ad hoc networks, wireless transport protocols, security, and application-level issues.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Katia Obraczka"] }]
+  },
+  "CSE280S": {
+    "title": " CSE280S: Seminar on Computer Systems ",
+    "description": "\nWeekly seminar series covering topics of current research in computer systems. Presents and discusses current research and literature in these areas. Prerequisite(s): Proven engagement in computer systems research. Enrollment is by permission of the instructor. Enrollment is restricted to graduate students.\n",
+    "units": "2",
+    "offered": [
+      {
+        "quarter": "Fall 2023",
+        "professors": ["Carlos Maltzahn", "Heiner Litz"]
+      },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Carlos Maltzahn", "Heiner Litz"]
+      },
+      { "quarter": "Spring 2024", "professors": ["Heiner Litz"] }
+    ]
+  },
+  "CSE280X": {
+    "title": " CSE280X: Seminar in Distributed Systems ",
+    "description": "\nCovers advanced research topics from the recent literature in distributed systems and related fields. Involves presentations from UCSC students and faculty. Enrollment by permission of instructor.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Peter Alvaro"] },
+      { "quarter": "Winter 2024", "professors": ["Peter Alvaro"] },
+      { "quarter": "Spring 2024", "professors": ["Peter Alvaro"] }
+    ]
+  },
+  "CSE280V": {
+    "title": " CSE280V: Seminar on Computer Vision ",
+    "description": "\nWeekly graduate-level seminar series discussing advanced topics in computer vision and image analysis. Current research and literature presented during each meeting. Enrollment is by permission of the instructor. Enrollment is restricted to graduate students.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Roberto Manduchi"] },
+      { "quarter": "Winter 2024", "professors": ["Roberto Manduchi"] },
+      { "quarter": "Spring 2024", "professors": ["Roberto Manduchi"] }
+    ]
+  },
+  "CSE280G": {
+    "title": " CSE280G: VLSI/CAD Seminar ",
+    "description": "\nWeekly seminar on advanced topics in VLSI and computer-aided design (CAD). Students present and discuss modern issues in semiconductor design, fabrication, and CAD. Frequent guest speakers present pertinent results from industry and academia.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Scott Beamer"] },
+      { "quarter": "Winter 2024", "professors": ["Scott Beamer"] },
+      { "quarter": "Spring 2024", "professors": ["Scott Beamer"] }
+    ]
+  },
+  "CSE280N": {
+    "title": " CSE280N: Seminar on Networks ",
+    "description": "\nWeekly seminar series covering topics of current research in networks and networked systems. Current research work and literature in these areas are discussed. Prerequisite(s): permission of instructor. Enrollment is restricted to graduate students.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Katia Obraczka", "Chen Qian"] },
+      {
+        "quarter": "Winter 2024",
+        "professors": ["Katia Obraczka", "Chen Qian"]
+      },
+      {
+        "quarter": "Spring 2024",
+        "professors": ["Katia Obraczka", "Chen Qian"]
+      }
+    ]
+  },
+  "CSE280O": {
+    "title": " CSE280O: Seminar in Applied Programming Languages ",
+    "description": "\nThis course covers current research in language-based approaches to security, distributed systems, databases, and formal verification. Students will read and present papers from academic journals and conferences. Enrollment is restricted to graduate students and by permission of the instructor. Enrollment restricted to graduate students. Repeatable for credit.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Lindsey Kuper"] },
+      { "quarter": "Winter 2024", "professors": ["Lindsey Kuper"] },
+      { "quarter": "Spring 2024", "professors": ["Lindsey Kuper"] }
+    ]
+  },
+  "CSE280P": {
+    "title": " CSE280P: Seminar on Parallel Processing ",
+    "description": "\nWeekly seminar series covering topics of current research in parallel systems, architectures, and algorithms. Current research work and literature in these areas are discussed.\n",
+    "units": "2",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Jose Renau"] },
+      { "quarter": "Winter 2024", "professors": ["Jose Renau"] },
+      { "quarter": "Spring 2024", "professors": ["Jose Renau"] }
+    ]
+  },
+  "CSE290S": {
+    "title": " CSE290S: Advanced Topics in Computer Systems ",
+    "description": "\nFocuses on current research topics in computer systems. Topics vary from year to year depending on the current research of the instructor(s) and the interests of the students. Students read technical papers from current journals and conference proceedings, and present class lectures. A research project is required.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Spring 2024", "professors": ["Peter Alvaro"] }]
+  },
+  "CSE290T": {
+    "title": " CSE290T: Topics in Computing for Society ",
+    "description": "\nCurrent research topics on computer technology that is intentionally targeted to benefiting society. Topics vary year to year. Students read papers from current conferences and journals, and present class lectures. A research project is required. Enrollment restricted to graduate students.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Luca de Alfaro"] }]
+  },
+  "CSE290C": {
+    "title": " CSE290C: Advanced Topics in Machine Learning ",
+    "description": "\nIn-depth study of current research topics in machine learning. Topics vary from year to year but include multi-class learning with boosting and SUM algorithms, belief nets, independent component analysis, MCMC sampling, and advanced clustering methods. Students read and present research papers; theoretical homework in addition to a research project.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Winter 2024", "professors": ["Yang Liu"] },
+      { "quarter": "Spring 2024", "professors": ["Leilani H. Gilpin"] }
+    ]
+  },
+  "CSE290D": {
+    "title": " CSE290D: Neural Computation ",
+    "description": "\nAn introduction to the design and analysis of neural network algorithms. Concentrates on large artificial neural networks and their applications in pattern recognition, signal processing, and forecasting and control. Topics include Hopfield and Boltzmann machines, perceptions, multilayer feed forward nets, and multilayer recurrent networks. Enrollment restricted to graduate students.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Yuyin Zhou"] }]
+  },
+  "CSE290K": {
+    "title": " CSE290K: Advanced Topics in Natural Language Processing ",
+    "description": "\nPerspective on the theory, plus examples, and tools useful to technologists and engineers for successfully guiding and supporting sales and marketing endeavors and, thereby, ensuring funding, staffing, product appeal, positive customer relationships, and marketplace success.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Winter 2024", "professors": ["Yi Zhang"] }]
+  },
+  "CSE290L": {
+    "title": " CSE290L: Topics in Crowdsourcing and Collaboration ",
+    "description": "\nExplores the foundations of crowdsourcing and computer-mediated collaboration. Covers the algorithmic and statistical foundations of crowdsourcing, introducing and analyzing algorithms, and experimenting with concrete systems. Also, provides an introduction to computational systems for mediating user interaction and collaboration. Enrollment restricted to graduate students.\n",
+    "units": "5",
+    "offered": [{ "quarter": "Fall 2023", "professors": ["James E Davis"] }]
+  },
+  "CSE293": {
+    "title": " CSE293: Advanced Topics in Computer Engineering ",
+    "description": "\nA graduate seminar on a research topic in computer engineering which varies according to instructor. Possible topics include, but are not limited to, communication networks, data compression, special-purpose architectures, computer arithmetic, software reliability and reusability, systolic arrays.\n",
+    "units": "5",
+    "offered": [
+      { "quarter": "Fall 2023", "professors": ["Dustin Richmond"] },
+      { "quarter": "Spring 2024", "professors": ["Liting Hu"] }
+    ]
+  }
+}
