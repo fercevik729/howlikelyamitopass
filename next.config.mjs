@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   source: "/api/:path*",
+  reactStrictMode: false,
   headers: [
     { key: "Access-Control-Allow-Credentials", value: "true" },
     { key: "Access-Control-Allow-Origin", value: "*" }, // replace this with actual origin if needed
