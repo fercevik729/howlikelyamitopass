@@ -19,7 +19,9 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
   const [courseSelected, setCourseSelected] = useState<Course | undefined>(
     undefined,
   );
-  const [professorSelected, setProfessorSelected] = useState<string>("");
+  const [professorSelected, setProfessorSelected] = useState<
+    Professor | undefined
+  >(undefined);
 
   useEffect(() => {
     const getQuarter = () => {
@@ -61,7 +63,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                     onClick={() => {
                       setQuarterSelected(quarterYear);
                       setCourseSelected(undefined);
-                      setProfessorSelected("");
+                      setProfessorSelected(undefined);
                     }}
                   >
                     {quarterYear}
@@ -95,7 +97,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                         }}
                         onClick={() => {
                           setCourseSelected(course);
-                          setProfessorSelected("");
+                          setProfessorSelected(undefined);
                         }}
                       >
                         {course.title}
@@ -119,11 +121,11 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                               variant={"outlined"}
                               style={{
                                 backgroundColor:
-                                  professorSelected === professor.name
+                                  professorSelected?.name === professor.name
                                     ? "white"
                                     : "transparent",
                                 color:
-                                  professorSelected === professor.name
+                                  professorSelected?.name === professor.name
                                     ? "black"
                                     : "white",
                                 border: "1px solid white",
