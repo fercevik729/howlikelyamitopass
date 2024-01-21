@@ -1,13 +1,16 @@
 import Image from "next/image";
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      <section id={"hero"} className={`flex py-36 items-center`}>
-        <div className={"flex flex-col gap-[52px] text-white"}>
-          <h1 className={"text-6xl font-bold"}>How Can I Pass?</h1>
+      <section
+        id={"hero"}
+        className={`flex items-center justify-center h-screen`}
+      >
+        <div className={"flex flex-col gap-[56px] text-white text-right"}>
+          <h1 className={"text-8xl font-bold"}>How Can I Pass?</h1>
           <span className={"text-xl"}>
             The answers that CS majors are looking for.
           </span>
@@ -16,8 +19,9 @@ export default function Home() {
               style={{
                 backgroundColor: "white",
                 color: "black",
-                padding: "10px 20px",
-                borderRadius: "0",
+                padding: "12px 40px",
+                borderRadius: "25px",
+                opacity: 0.7,
               }}
               className={"w-fit"}
               variant={"contained"}
@@ -27,7 +31,7 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <div>
+        <div className={"ml-left"}>
           <Image
             className={"ml-5"}
             src={"/spaceship.svg"}
@@ -36,9 +40,6 @@ export default function Home() {
             height={500}
           />
         </div>
-      </section>
-      <section className={"justify-center bg-[#3E93E9]"}>
-        <Typography variant={"h2"}>How it Works</Typography>
       </section>
     </main>
   );
