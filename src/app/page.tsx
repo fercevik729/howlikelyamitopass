@@ -1,8 +1,18 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.height = "";
+    };
+  }, []);
   return (
     <main>
       <section
