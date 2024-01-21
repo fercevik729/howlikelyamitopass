@@ -1,55 +1,72 @@
 "use client";
-import { Course, CourseOffer } from "@/types/model";
+import { Course, CourseOffer, Professor } from "@/types/model";
 import { Button, Typography } from "@mui/material";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface ProfessorChoiceProps {
   courses: Course[];
 }
 
+interface CourseByQuarterYear {
+  [key: string]: Course[];
+}
+
 export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
-  const router = useRouter();
-  // Seperate the courses into groups by quarter year
-  const coursesByQuarterYear: { [key: string]: Course[] } = {};
+  // Separate the courses into groups by quarter year
+  const [coursesByQuarterYear, setCoursesByQuarterYear] =
+    useState<CourseByQuarterYear>({});
   const [quarterSelected, setQuarterSelected] = useState<string>("");
   const [courseSelected, setCourseSelected] = useState<Course>();
   const [professorSelected, setProfessorSelected] = useState<string>("");
 
-  courses.forEach((course: Course) => {
-    const quartersOffered: CourseOffer[] = course.offered;
-    quartersOffered.forEach((quarterOffered: CourseOffer) => {
-      const quarterYear = quarterOffered.quarter;
-      if (!coursesByQuarterYear[quarterYear]) {
-        coursesByQuarterYear[quarterYear] = [];
-      }
-      coursesByQuarterYear[quarterYear].push(course);
-    });
-  });
+  useEffect(() => {
+    const getQuarter = () => {
+      const tempCoursesByQuarterYear: CourseByQuarterYear = {};
+      courses.forEach((course: Course) => {
+        course.offered.forEach((offer: CourseOffer) => {
+          if (tempCoursesByQuarterYear[offer.quarter]) {
+            tempCoursesByQuarterYear[offer.quarter].push(course);
+          } else {
+            tempCoursesByQuarterYear[offer.quarter] = [course];
+          }
+        });
+      });
+      setCoursesByQuarterYear(tempCoursesByQuarterYear);
+    };
+    getQuarter();
+  }, []);
 
   return (
     <div className={"max-w-[1000px] mt-16 mx-auto px-[25px]"}>
       <div className={"flex flex-col gap-6"}>
         <ul className={"flex gap-3"}>
-          {Object.keys(coursesByQuarterYear).map((quarterYear: string) => {
-            return (
-              <li key={quarterYear}>
-                <Button
-                  variant={"outlined"}
-                  style={{
-                    backgroundColor:
-                      quarterSelected === quarterYear ? "white" : "transparent",
-                    color: quarterSelected === quarterYear ? "black" : "white",
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                  }}
-                  onClick={() => setQuarterSelected(quarterYear)}
-                >
-                  {quarterYear}
-                </Button>
-              </li>
-            );
-          })}
+          {coursesByQuarterYear &&
+            Object.keys(coursesByQuarterYear).map((quarterYear: string) => {
+              return (
+                <li key={quarterYear}>
+                  <Button
+                    variant={"outlined"}
+                    style={{
+                      backgroundColor:
+                        quarterSelected === quarterYear
+                          ? "white"
+                          : "transparent",
+                      color:
+                        quarterSelected === quarterYear ? "black" : "white",
+                      border: "1px solid white",
+                      borderRadius: "10px",
+                    }}
+                    onClick={() => {
+                      setQuarterSelected(quarterYear);
+                      setCourseSelected("");
+                      setProfessorSelected("");
+                    }}
+                  >
+                    {quarterYear}
+                  </Button>
+                </li>
+              );
+            })}
         </ul>
         <div className={"flex gap-16"}>
           <div>
@@ -58,7 +75,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
               {quarterSelected &&
                 coursesByQuarterYear[quarterSelected].map((course: Course) => {
                   return (
-                    <li key={course.id}>
+                    <li key={`${quarterSelected}-${course.id}`}>
                       <Button
                         variant={"outlined"}
                         style={{
@@ -74,9 +91,12 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                           borderRadius: "10px",
                           width: "100%",
                         }}
-                        onClick={() => setCourseSelected(course)}
+                        onClick={() => {
+                          setCourseSelected(course);
+                          setProfessorSelected("");
+                        }}
                       >
-                        {course.id}
+                        {course.title}
                       </Button>
                     </li>
                   );
@@ -90,38 +110,33 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                 if (offer.quarter === quarterSelected) {
                   return (
                     <ul className={"flex flex-col gap-3"} key={offer.quarter}>
-                      {offer.professors.map(
-                        (professor: string, index: number) => {
-                          return (
-                            <li key={`${professor}-${index}-${offer.quarter}`}>
-                              <Button
-                                variant={"outlined"}
-                                style={{
-                                  backgroundColor:
-                                    professorSelected === professor
-                                      ? "white"
-                                      : "transparent",
-                                  color:
-                                    professorSelected === professor
-                                      ? "black"
-                                      : "white",
-                                  border: "1px solid white",
-                                  borderRadius: "10px",
-                                  width: "100%",
-                                }}
-                                onClick={() => {
-                                  setProfessorSelected(professor);
-                                  router.push(
-                                    `/evaluate?course=${courseSelected.id}&professor=${professor}`,
-                                  );
-                                }}
-                              >
-                                {professor}
-                              </Button>
-                            </li>
-                          );
-                        },
-                      )}
+                      {offer.professors.map((professor: Professor) => {
+                        return (
+                          <li key={`${quarterSelected}-${professor.id}`}>
+                            <Button
+                              variant={"outlined"}
+                              style={{
+                                backgroundColor:
+                                  professorSelected === professor
+                                    ? "white"
+                                    : "transparent",
+                                color:
+                                  professorSelected === professor
+                                    ? "black"
+                                    : "white",
+                                border: "1px solid white",
+                                borderRadius: "10px",
+                                width: "100%",
+                              }}
+                              onClick={() => {
+                                setProfessorSelected(professor);
+                              }}
+                            >
+                              {professor.name}
+                            </Button>
+                          </li>
+                        );
+                      })}
                     </ul>
                   );
                 }
