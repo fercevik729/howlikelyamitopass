@@ -13,7 +13,9 @@ export async function POST(req: NextRequest) {
     cons: string[]
     prerequisites: string[]
   */
-  const { name, course } = await req.json();
+  const { professor: name, course } = await req.json();
+
+  console.log(`name: ${name}, course: ${course}`);
 
   const courseDescription = await prisma.course.findFirst({
     where: { title: course },
