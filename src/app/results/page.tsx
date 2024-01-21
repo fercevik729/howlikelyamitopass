@@ -3,6 +3,7 @@ import { APP_URL } from "@/config";
 import { Skeleton } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
+import ResultsPercentage from "@/components/ResultsPercentage";
 
 function SurveyResponse() {
   const searchParams = useSearchParams();
@@ -68,6 +69,7 @@ function SurveyResponse() {
   }
   return (
     <div>
+      <ResultsPercentage percentage={passRate * 100} />
       <p>{summary}</p>
       <p>Pass rate: {passRate}</p>
     </div>
