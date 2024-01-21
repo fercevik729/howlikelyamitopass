@@ -1,0 +1,7 @@
+diff --git a/node_modules/react-wheel-of-prizes/dist/index.d.ts b/node_modules/react-wheel-of-prizes/dist/index.d.ts
+new file mode 100644
+index 0000000..dd7dc30
+--- /dev/null
++++ b/node_modules/react-wheel-of-prizes/dist/index.d.ts
+@@ -0,0 +1 @@
++export { default } from './index';
