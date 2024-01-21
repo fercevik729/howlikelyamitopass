@@ -4,9 +4,9 @@
     "description": "\nProvides an introduction to computers. Personal computing is emphasized, and students are introduced to word processing, spreadsheets, database management, graphics, and programming. Covers fundamentals of computing and current and future uses of computer technology, PC hardware, Windows operating system, applications software, networking and the Internet, and developments in the computer industry. Designed for students with little or no experience using computers. Students cannot receive credit for this course and Computer Science 2.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Gerald B Moulds"] },
-      { "quarter": "Winter 2024", "professors": ["Gerald B Moulds"] },
-      { "quarter": "Spring 2024", "professors": ["Gerald B Moulds"] }
+      { "quarter": "Fall 2023", "professors": ["Gerald Moulds"] },
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
     ]
   },
   "CSE12": {
@@ -54,7 +54,7 @@
     "offered": [
       {
         "quarter": "Fall 2023",
-        "professors": ["Alexandra Kolla", "John T Musacchio"]
+        "professors": ["Alexandra Kolla", "John Musacchio"]
       },
       {
         "quarter": "Winter 2024",
@@ -62,7 +62,7 @@
       },
       {
         "quarter": "Spring 2024",
-        "professors": ["Allen Van Gelder", "Patrick Tantalo", "Staff"]
+        "professors": ["Allen Van Gelder", "Patrick Tantalo"]
       }
     ]
   },
@@ -74,22 +74,22 @@
       {
         "quarter": "Fall 2023",
         "professors": [
-          "Larissa A Munishkina",
-          "Oswald A Campesato",
-          "Cormac A Flanagan"
+          "Larissa Munishkina",
+          "Oswald Campesato",
+          "Cormac Flanagan"
         ]
       },
       {
         "quarter": "Winter 2024",
         "professors": [
-          "Larissa A Munishkina",
+          "Larissa Munishkina",
           "Benedict John Paten",
-          "Oswald A Campesato"
+          "Oswald Campesato"
         ]
       },
       {
         "quarter": "Spring 2024",
-        "professors": ["Larissa A Munishkina", "Oswald A Campesato"]
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
       }
     ]
   },
@@ -100,15 +100,15 @@
     "offered": [
       {
         "quarter": "Fall 2023",
-        "professors": ["Larissa A Munishkina", "Oswald A Campesato"]
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
       },
       {
         "quarter": "Winter 2024",
-        "professors": ["Larissa A Munishkina", "Oswald A Campesato"]
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
       },
       {
         "quarter": "Spring 2024",
-        "professors": ["Larissa A Munishkina", "Oswald A Campesato"]
+        "professors": ["Larissa Munishkina", "Oswald Campesato"]
       }
     ]
   },
@@ -170,7 +170,7 @@
       { "quarter": "Winter 2024", "professors": ["Patrick Tantalo"] },
       {
         "quarter": "Spring 2024",
-        "professors": ["Niloofar Montazeri", "James E Davis"]
+        "professors": ["Niloofar Montazeri", "James Davis"]
       }
     ]
   },
@@ -185,7 +185,7 @@
     "description": "\nMethods for the systematic construction and mathematical analysis of algorithms. Order notation, the RAM model of computation, lower bounds, and recurrence relations are covered. The algorithm design techniques include divide-and-conquer, branch and bound, and dynamic programming. Applications to combinatorial, graph, string, and geometric algorithms.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Delbert D. Bailey"] },
+      { "quarter": "Fall 2023", "professors": ["Delbert Bailey"] },
       { "quarter": "Winter 2024", "professors": ["Vaggos Chatziafratis"] },
       { "quarter": "Spring 2024", "professors": ["Patrick Tantalo"] }
     ]
@@ -196,8 +196,8 @@
     "units": "5",
     "offered": [
       { "quarter": "Fall 2023", "professors": ["Daniel Fremont"] },
-      { "quarter": "Winter 2024", "professors": ["Delbert D. Bailey"] },
-      { "quarter": "Spring 2024", "professors": ["Delbert D. Bailey"] }
+      { "quarter": "Winter 2024", "professors": ["Delbert Bailey"] },
+      { "quarter": "Spring 2024", "professors": ["Delbert Bailey"] }
     ]
   },
   "CSE104": {
@@ -221,7 +221,7 @@
     "offered": [
       { "quarter": "Fall 2023", "professors": ["Patrick Tantalo"] },
       { "quarter": "Winter 2024", "professors": ["Patrick Tantalo"] },
-      { "quarter": "Spring 2024", "professors": ["John T Musacchio"] }
+      { "quarter": "Spring 2024", "professors": ["John Musacchio"] }
     ]
   },
   "CSE108": {
@@ -229,7 +229,7 @@
     "description": "\nIndividual Study or Research\n",
     "units": "5",
     "offered": [
-      { "quarter": "Spring 2024", "professors": ["Yannis Demertzis"] }
+      { "quarter": "Spring 2024", "professors": ["Ioannis Demertzis"] }
     ]
   },
   "CSE110A": {
@@ -237,7 +237,7 @@
     "description": "\nAn introduction to the basic techniques used in compiler design. Topics include compiler structure, symbol tables, regular expressions and languages, finite automata, lexical analysis, context-free languages, LL(1), recursive descent, LALR(1), and LR(1) parsing; and attribute grammars as a model of syntax-directed translation. Students use compiler building tools to construct a working compiler.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Spring 2024", "professors": ["Tyler Rey Sorensen"] }
+      { "quarter": "Spring 2024", "professors": ["Tyler Sorensen"] }
     ]
   },
   "CSE111": {
@@ -251,7 +251,7 @@
     "description": "\nIntroduction to parallel and concurrent programming. Topics include: types of parallel computers and programming platforms; design, implementation, and optimization of programs for parallel and multicore processors; basic and advanced programming techniques; performance analysis and load balancing; and selected parallel algorithms. Prerequisite(s): Computer Engineering 12 and 12L and Computer Science 101. Computer Engineering 110 or 112 recommended.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Tyler Rey Sorensen"] }
+      { "quarter": "Winter 2024", "professors": ["Tyler Sorensen"] }
     ]
   },
   "CSE114A": {
@@ -260,7 +260,7 @@
     "units": "5",
     "offered": [
       { "quarter": "Fall 2023", "professors": ["Owen Arden"] },
-      { "quarter": "Winter 2024", "professors": ["Cormac A Flanagan"] },
+      { "quarter": "Winter 2024", "professors": ["Cormac Flanagan"] },
       {
         "quarter": "Spring 2024",
         "professors": ["Lindsey Kuper", "Allen Van Gelder"]
@@ -271,16 +271,16 @@
     "title": " CSE115D: Software Design Project - Accelerated ",
     "description": "\nAccelerated version of CSE 115B and 115C. Students work in teams to develop, test,\u00a0document and deploy a substantial software project.\u00a0Each team gives a formal presentation and demonstration of their project.\u00a0Credit cannot be received for both CSE 115D and any part of the 115B-115C sequence. Prerequisite/s: CSE 115A\n",
     "units": "5",
-    "offered": [{ "quarter": "Fall 2023", "professors": ["Richard K Jullig"] }]
+    "offered": [{ "quarter": "Fall 2023", "professors": ["Richard Jullig"] }]
   },
   "CSE115A": {
     "title": " CSE115A: Introduction to Software Engineering ",
     "description": "\nEmphasizes the characteristics of well-engineered software systems. Topics include requirements analysis and specification, design, programming, verification and validation, maintenance, and project management. Practical and research methods are studied. Imparts an understanding of the steps used to effectively develop computer software. (Formerly Software Methodology.)\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Richard K Jullig"] },
-      { "quarter": "Winter 2024", "professors": ["Richard K Jullig"] },
-      { "quarter": "Spring 2024", "professors": ["Richard K Jullig"] }
+      { "quarter": "Fall 2023", "professors": ["Richard Jullig"] },
+      { "quarter": "Winter 2024", "professors": ["Richard Jullig"] },
+      { "quarter": "Spring 2024", "professors": ["Richard Jullig"] }
     ]
   },
   "CSE115B": {
@@ -288,7 +288,7 @@
     "description": "\nStudents in teams specify, design, construct, test, and document a complete software system in a specialized application domain. Class time is spent in technical discussions and ongoing design reviews. A formal presentation and demonstration of each project is required. An organizational meeting will be held during the preceding quarter. Projects may be drawn from industry and campus research groups.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Richard K Jullig"] }
+      { "quarter": "Winter 2024", "professors": ["Richard Jullig"] }
     ]
   },
   "CSE115C": {
@@ -296,7 +296,7 @@
     "description": "\nContinuation of course 116. Students work in teams to develop, test, document, and deploy a substantial software project. Teams give a formal presentation and demonstration of each project.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Spring 2024", "professors": ["Richard K Jullig"] }
+      { "quarter": "Spring 2024", "professors": ["Richard Jullig"] }
     ]
   },
   "CSE120": {
@@ -369,7 +369,7 @@
     "description": "\nIntroduction to computer security (including selected topics in network security). Access control. Security in programming languages. Basic cryptography. Security protocols.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Alvaro A. Cardenas"] }
+      { "quarter": "Fall 2023", "professors": ["Alvaro Cardenas"] }
     ]
   },
   "CSE134": {
@@ -392,7 +392,7 @@
     "description": "\nIntroduction to the contemporary concepts and techniques of artificial intelligence, including any or all of: machine perception and inference, machine learning, optimization problems, computational methods and models of search, game playing and theorem proving. Emphasis may be on any formal method of perceiving, learning, reasoning, and problem solving which proves to be effective. This includes both symbolic and neural network approaches to artificial intelligence. Issues discussed include symbolic versus nonsymbolic methods, local versus global methods, hierarchical organization and control, and brain modeling versus engineering approaches. Lisp or Prolog may be introduced. Involves one major project or regular programming assignments.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Leilani H. Gilpin"] },
+      { "quarter": "Fall 2023", "professors": ["Leilani Gilpin"] },
       { "quarter": "Spring 2024", "professors": ["Niloofar Montazeri"] }
     ]
   },
@@ -403,7 +403,7 @@
     "offered": [
       { "quarter": "Fall 2023", "professors": ["Razvan Marinescu"] },
       { "quarter": "Winter 2024", "professors": ["Razvan Marinescu"] },
-      { "quarter": "Spring 2024", "professors": ["Xin Eric Wang"] }
+      { "quarter": "Spring 2024", "professors": ["Xin Wang"] }
     ]
   },
   "CSE143": {
@@ -470,7 +470,7 @@
     "units": "5",
     "offered": [
       { "quarter": "Winter 2024", "professors": ["Alex Pang"] },
-      { "quarter": "Spring 2024", "professors": ["James E Davis"] }
+      { "quarter": "Spring 2024", "professors": ["James Davis"] }
     ]
   },
   "CSE164": {
@@ -490,8 +490,8 @@
     "description": "\nIntroduction to the concepts, approaches, tools, and methodology of database design. Covers the entity-relationship model, the relational model, relational algebra, relational calculus, commercial languages (such as SQL and QBE), functional dependencies, normal forms, and design theory. Other topics may include knowledge-bases, constraint databases, and alternative database models.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Sheldon J Finkelstein"] },
-      { "quarter": "Winter 2024", "professors": ["Sheldon J Finkelstein"] }
+      { "quarter": "Fall 2023", "professors": ["Sheldon Finkelstein"] },
+      { "quarter": "Winter 2024", "professors": ["Sheldon Finkelstein"] }
     ]
   },
   "CSE181": {
@@ -499,7 +499,7 @@
     "description": "\nIntroduction to the architecture and implementation of database systems. Topics covered include data storage, tree and hash indexes, storage management, query evaluation and optimization, transaction management, concurrency control, recovery, and XML data management. Prerequisite(s): CSE 180 and CSE 130.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Spring 2024", "professors": ["Sheldon J Finkelstein"] }
+      { "quarter": "Spring 2024", "professors": ["Sheldon Finkelstein"] }
     ]
   },
   "CSE182": {
@@ -507,7 +507,7 @@
     "description": "\nConcepts, approaches, tools, and methodology of database design. Topics include the entity-relationship model; the relational data model; normal forms; commercial languages such as SQL (SQL constraints, SQL triggers, and update languages); query-by-example (QBE); XML data model, and XML query language (XQuery); as well as relational database-management support for XML and object-relational features in database-management systems. Involves a database -application development project. Prerequisite(s): CSE 16 or BME 160; CSE 15 and CSE 15L or CSE 13E or CSE 13S or ECE 13. Course intended for non-majors; computer science majors should enroll in CSE 180.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Spring 2024", "professors": ["Sheldon J Finkelstein"] }
+      { "quarter": "Spring 2024", "professors": ["Sheldon Finkelstein"] }
     ]
   },
   "CSE183": {
@@ -526,9 +526,9 @@
     "description": "\nWriting by engineers and computer scientists, not to general audiences, but to engineers, engineering managers, and technical writers. Exercises include job application and resume, in-code documentation, algorithm description, naive-user documentation, library puzzle, survey article, proposal, progress report, formal technical report, and oral presentation. Students cannot receive credit for this course and CSE 185S. (Formerly Computer Engineering 185)\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Gerald B Moulds"] },
-      { "quarter": "Winter 2024", "professors": ["Gerald B Moulds"] },
-      { "quarter": "Spring 2024", "professors": ["Gerald B Moulds"] }
+      { "quarter": "Fall 2023", "professors": ["Gerald Moulds"] },
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
     ]
   },
   "CSE185S": {
@@ -536,8 +536,8 @@
     "description": "\nWriting by engineers and computer scientists, not to general audiences, but to engineers, engineering managers, and technical writers. Exercises include job application and resume, in-code documentation, algorithm description, naive-user documentation, library puzzle, survey article, proposal, progress report, formal technical report, and oral presentation. Students cannot receive credit for this course and CSE 185E. (Formerly Computer Engineering 185)\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Gerald B Moulds"] },
-      { "quarter": "Spring 2024", "professors": ["Gerald B Moulds"] }
+      { "quarter": "Winter 2024", "professors": ["Gerald Moulds"] },
+      { "quarter": "Spring 2024", "professors": ["Gerald Moulds"] }
     ]
   },
   "CSE186": {
@@ -559,7 +559,7 @@
     "offered": [
       {
         "quarter": "Fall 2023",
-        "professors": ["Harikrishna Santhosh Kuttivelil"]
+        "professors": ["Harikrishna Kuttivelil"]
       }
     ]
   },
@@ -596,7 +596,7 @@
     "description": "\nAdvanced study of compiler implementation. Topics include compiler structure back end, run-time environments, storage management, garbage collection, register allocation, code generation, basic blocks, control flow, data flow, local and global optimization, interpretation, machine code generation. Students may not receive credit for this course and course 104B. Taught in conjunction with 104B. Prerequisite(s): Enrollment restricted to graduate students.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Fall 2023", "professors": ["Tyler Rey Sorensen"] }
+      { "quarter": "Fall 2023", "professors": ["Tyler Sorensen"] }
     ]
   },
   "CSE215": {
@@ -604,7 +604,7 @@
     "description": "\nAdvanced course in implementation techniques for database systems. For students who wish to do research in databases or to learn more about large-scale data processing. Topics include: indexing of complex data; techniques for high-volume concurrency control; query processing and optimization; database recovery; parallel database system architectures; database systems for streaming data; approximate query answering. Additional topics may include: self-managing database systems; advanced query optimization techniques; and query processing techniques for semi-structured data. Prerequisite(s): Enrollment is restricted to graduate students. Undergraduates that have taken CSE 181 may enroll. A basic knowledge of databases, similar to the content of CSE 180, is recommended. (Formerly CMPS 278.)\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Sheldon J Finkelstein"] }
+      { "quarter": "Winter 2024", "professors": ["Sheldon Finkelstein"] }
     ]
   },
   "CSE216": {
@@ -651,21 +651,15 @@
     "description": "\nOverview of research topics in computer and network security. Topics may include cryptographic operations, security properties and policies, authentication and access control, attacks on computer systems and defenses against them, security in programming languages, and network protocols for security.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Alvaro A. Cardenas"] }
+      { "quarter": "Winter 2024", "professors": ["Alvaro Cardenas"] }
     ]
-  },
-  "CSE234": {
-    "title": " CSE234: Understanding Cryptography ",
-    "description": "\nCryptography has become ubiquitous, from light bulbs to atomic weapons. This course provides both a comprehensive introduction to applied cryptography and an additional focus on the human issues caused by bad implementations, bad processes, and broken algorithms. Knowledge of C Programming, Linux, and Virtual machines is required.\n",
-    "units": "5",
-    "offered": [{ "quarter": "Spring 2024", "professors": ["Staff"] }]
   },
   "CSE240": {
     "title": " CSE240: Artificial Intelligence ",
     "description": "\nPrepares students for doing research in artificial intelligence. Major topics covered are search and heuristics, knowledge representation, planning, deduction and inference, reinforcement learning, associative pattern retrieval, and adaptive search. Discussion includes current research issues in AI problem-solving methods. Individualized projects.\n",
     "units": "5",
     "offered": [
-      { "quarter": "Winter 2024", "professors": ["Leilani H. Gilpin"] }
+      { "quarter": "Winter 2024", "professors": ["Leilani Gilpin"] }
     ]
   },
   "CSE242": {
@@ -713,7 +707,7 @@
         "quarter": "Winter 2024",
         "professors": ["Carlos Maltzahn", "Heiner Litz"]
       },
-      { "quarter": "Spring 2024", "professors": ["Staff", "Heiner Litz"] }
+      { "quarter": "Spring 2024", "professors": ["Heiner Litz"] }
     ]
   },
   "CSE280X": {
