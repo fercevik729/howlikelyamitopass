@@ -60,7 +60,7 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                     }}
                     onClick={() => {
                       setQuarterSelected(quarterYear);
-                      setCourseSelected("");
+                      setCourseSelected(undefined);
                       setProfessorSelected("");
                     }}
                   >
