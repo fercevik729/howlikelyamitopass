@@ -1,10 +1,10 @@
 import ProfessorChoice from "@/components/ProfessorChoice";
 import ProfessorStats from "@/components/ProfessorStats";
+import { APP_URL } from "@/config";
 import { Course } from "@/types/model";
 
 async function getData() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${apiUrl}/api/courses`);
+  const res = await fetch(`${APP_URL}/api/courses`);
 
   const courses: Course[] = await res.json();
 
