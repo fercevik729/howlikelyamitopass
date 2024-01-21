@@ -47,8 +47,8 @@ export default function ProfessorChoice({
 
   return (
     <div className={"w-max justify-self-end"}>
-      <div className={"flex flex-col gap-6"}>
-        <ul className={"flex gap-3"}>
+      <div className={"w-96 flex flex-col gap-6"}>
+        <ul className={"flex gap-3 h-8"}>
           {courses.length > 0
             ? Object.keys(coursesByQuarterYear).map((quarterYear: string) => {
                 return (
@@ -92,7 +92,7 @@ export default function ProfessorChoice({
               ))}
         </ul>
         <div className={"flex gap-16"}>
-          <div>
+          <div className="w-36">
             <Typography variant={"h6"}>Classes</Typography>
             <ul className={"flex flex-col gap-3 h-[60vh] overflow-scroll px-3"}>
               {quarterSelected &&
