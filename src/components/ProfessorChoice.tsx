@@ -119,11 +119,11 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                               variant={"outlined"}
                               style={{
                                 backgroundColor:
-                                  professorSelected === professor
+                                  professorSelected === professor.name
                                     ? "white"
                                     : "transparent",
                                 color:
-                                  professorSelected === professor
+                                  professorSelected === professor.name
                                     ? "black"
                                     : "white",
                                 border: "1px solid white",
