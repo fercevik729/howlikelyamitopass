@@ -12,10 +12,12 @@ export async function POST(req: NextRequest) {
     data: {
       name,
       tags,
-      rating: parseFloat(rating.trim()),
-      wouldRepeat: parseFloat(wouldRepeat.trim()),
-      difficulty: parseFloat(difficulty.trim()),
-      comments,
+      rating: rating === undefined ? 0.0 : parseFloat(rating.trim()),
+      wouldRepeat:
+        wouldRepeat === undefined ? 0.0 : parseFloat(wouldRepeat.trim()),
+      difficulty:
+        difficulty === undefined ? 0.0 : parseFloat(difficulty.trim()),
+      comments: comments ?? [],
     },
     select: {
       id: true,
