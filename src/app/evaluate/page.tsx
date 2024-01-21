@@ -1,34 +1,29 @@
-import {Typography} from "@mui/material";
 import ProfessorChoice from "@/components/ProfessorChoice";
-import { promises as fs } from "fs";
-import { Course } from "@/types/model";
+import ProfessorStats from "@/components/ProfessorStats";
 
 async function getData() {
-  // const res = await fetch('http://localhost:3000/api')
-
-  const file = await fs.readFile(
-    process.cwd() + "/src/app/sample.json",
-    "utf8",
-  );
-
-  const data = JSON.parse(file);
-  const courses: Course[] = [];
-
-  // TEMP
-  for (const dataKey in data) {
-    const course: Course = {
-      id: dataKey,
-      ...data[dataKey],
-    };
-    courses.push(course);
-  }
-
-  // if (!res.ok) {
-  //   // This will activate the closest `error.js` Error Boundary
-  //   throw new Error('Failed to fetch data')
+  // const res = await fetch('http://localhost:3000/api/courses')
+  //
+  // const data = res.json();
+  // const courses: Course[] = [];
+  //
+  // // TEMP
+  // for (const dataKey in data) {
+  //   const course: Course = {
+  //     id: dataKey,
+  //     ...data[dataKey],
+  //   };
+  //   courses.push(course);
   // }
+  //
+  // // if (!res.ok) {
+  // //   // This will activate the closest `error.js` Error Boundary
+  // //   throw new Error('Failed to fetch data')
+  // // }
+  //
+  // console.log('is here')
 
-  return courses;
+  return [];
 }
 
 export default async function Evaluate() {
@@ -36,7 +31,10 @@ export default async function Evaluate() {
 
   return (
     <>
-      <ProfessorChoice courses={data} />
+      <div>
+        <ProfessorChoice courses={data} />
+        <ProfessorStats />
+      </div>
     </>
   );
 }

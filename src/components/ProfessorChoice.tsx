@@ -2,12 +2,14 @@
 import { Course, CourseOffer } from "@/types/model";
 import { Button, Typography } from "@mui/material";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface ProfessorChoiceProps {
   courses: Course[];
 }
 
 export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
+  const router = useRouter();
   // Seperate the courses into groups by quarter year
   const coursesByQuarterYear: { [key: string]: Course[] } = {};
   const [quarterSelected, setQuarterSelected] = useState<string>("");
@@ -107,7 +109,12 @@ export default function ProfessorChoice({ courses }: ProfessorChoiceProps) {
                                   borderRadius: "10px",
                                   width: "100%",
                                 }}
-                                onClick={() => setProfessorSelected(professor)}
+                                onClick={() => {
+                                  setProfessorSelected(professor);
+                                  router.push(
+                                    `/evaluate?course=${courseSelected.id}&professor=${professor}`,
+                                  );
+                                }}
                               >
                                 {professor}
                               </Button>
