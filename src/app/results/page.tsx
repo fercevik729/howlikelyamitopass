@@ -69,10 +69,13 @@ function SurveyResponse() {
     );
   }
   return (
-    <div>
+    <div className="flex flex-row justify-between">
       <ResultsPercentage percentage={passRate * 100} />
-      <p>{summary}</p>
-      <p>Pass rate: {passRate}</p>
+
+      <div className="flex flex-col text-wrap w-3/4">
+        <h1>Summary</h1>
+        <p>{summary}</p>
+      </div>
     </div>
   );
 }

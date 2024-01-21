@@ -23,8 +23,8 @@ export default function ResultsPercentage(props: { percentage: number }) {
   }, [wheel, props.percentage]);
 
   return (
-    <div className="border flex flex-row items-center">
-      <div className="border flex flex-col">
+    <div className="flex flex-row items-center">
+      <div className="flex flex-col">
         <p className="text-6xl text-center font-bold">
           <CountUp end={props.percentage} duration={2} />%
         </p>

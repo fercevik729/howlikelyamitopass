@@ -12,6 +12,11 @@ export default function NavBar() {
           }
         >
           <li>
+            <Link href="/" passHref>
+              <span>Home</span>
+            </Link>
+          </li>
+          <li>
             <Link href="/about" passHref>
               <span>About</span>
             </Link>
