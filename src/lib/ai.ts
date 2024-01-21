@@ -31,10 +31,10 @@ const prompt1 =
 const chain1 = RunnableSequence.from([prompt1, model, parser1]);
 
 const prompt2 = PromptTemplate.fromTemplate(
-  `Given prerequisite knowledge {prerequisite} and this pros and cons list: {pros}, {cons},
-  generate a list of 5 brief questions that ask to rate a student's comfortability with topics
+  `Given prerequisite knowledge {prerequisites} and this pros and cons list: {pros}, {cons},
+  generate a list of 5 brief questions separated by ';;;' that ask to rate a student's comfortability with topics
   to gauge the potential performance of a student in the class. Assume the student has not taken the class yet. 
-  Finally ask questions about what grade they got in the prerequisite class on a scale of A - F.`,
+  Finally ask questions about what grade they got in the prerequisite classes on a scale of A - F.`,
 );
 
 const chain2 = RunnableSequence.from([

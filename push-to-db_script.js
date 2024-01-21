@@ -23,7 +23,7 @@ async function test() {
       offered: value.offered,
     };
     console.log("OBJ:", obj);
-    fetch("http://localhost:3000/api/course", {
+    fetch("http://helpmepass.study/api/course", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
