@@ -1,91 +1,60 @@
-// import { ChatOpenAI } from "@langchain/openai";
-// import { ChatPromptTemplate } from "@langchain/core/prompts";
-// import { JsonOutputFunctionsParser, StructuredOutputParser } from "langchain/output_parsers";
-// import { RunnableSequence } from "@langchain/core/runnables";
-
-// const chatModel = new ChatOpenAI({
-//   openAIApiKey: process.env.OPENAI_API_KEY,
-// });
-
-// const parser = StructuredOutputParser.fromNamesAndDescriptions({
-//   prerequisites: "prerequisite courses needed to succed, should be a list",
-//   skills: "necessary skills and concepts to succeed, should be a list",
-// })
-/*
-const parser = new JsonOutputFunctionsParser();
-// Define the function schema
-const extractionFunctionSchema = {
-  name: "extractor",
-  description: "Extracts fields from the input.",
-  parameters: {
-    type: "object",
-    properties: {
-      prerequisites: {
-        type: "array",
-        description: "A list of prerequisite courses",
-      },
-      skills: {
-        type: "array",
-        description: "A list of skills needed to succeed",
-      },
-      concepts: {
-        type: "array",
-        description: "A list of concepts needed to succeed",
-      }
-    },
-    required: ["prerequisites", "skills", "concepts"],
-  },
-};
-
-// Professor name, class name, description, and reviews ...
-// User skill level, confidence, etc.
-// User's goal (e.g. get an A, learn a lot, etc.)
-
-const prompt1 = ChatPromptTemplate.fromTemplate(
-  `{name} is a professor at UCSC that teaches {class}, which is {description}. 
-  Generate a list of prerequisite knowledge and any things students need to know about
-  the professor given the following reviews: {reviews}. Output should be of the format\n{format_instructions}\n{name}\n{class}\n{description}\n{reviews}\n`,
-);
-*/
 import { z } from "zod";
 import { OpenAI } from "@langchain/openai";
 import { RunnableSequence } from "@langchain/core/runnables";
 import { StructuredOutputParser } from "langchain/output_parsers";
 import { PromptTemplate } from "@langchain/core/prompts";
+import { StringOutputParser } from "@langchain/core/output_parsers";
+
+const model = new OpenAI({ openAIApiKey: process.env.OPENAI_API_KEY });
 
 // We can use zod to define a schema for the output using the `fromZodSchema` method of `StructuredOutputParser`.
-const parser = StructuredOutputParser.fromZodSchema(
+const parser1 = StructuredOutputParser.fromZodSchema(
   z.object({
     prerequisites: z
       .array(z.string())
       .describe("prerequisite courses needed to succeed, as a list"),
-    concepts: z
+    pros: z
       .array(z.string())
-      .describe("necessary concepts to succeed, should be a list"),
-    professorInfo: z
+      .describe("necessary concepts and skills to succeed, should be a list"),
+    cons: z
       .array(z.string())
       .describe(
         "information about the professor to be aware of, should be a list",
       ),
   }),
 );
+// First prompt
+const prompt1 =
+  PromptTemplate.fromTemplate(`{name} is a professor at UCSC that teaches {class}, which is {description}. 
+  Generate a list of prerequisite knowledge and pros and cons of taking this class given the following reviews: {reviews}\n{format_instructions}\n{name}\n{class}\n{description}\n{reviews}\n`);
 
-const prompt1 = PromptTemplate.fromTemplate(
-  `{name} is a professor at UCSC that teaches {class}, which is {description}. 
-  Generate a list of prerequisite knowledge and any things students need to know about
-  the professor given the following reviews: {reviews}.\n{format_instructions}\n{name}\n{class}\n{description}\n{reviews}\n`,
+const chain1 = RunnableSequence.from([prompt1, model, parser1]);
+
+const prompt2 = PromptTemplate.fromTemplate(
+  `Given prerequisite knowledge {prerequisite} and this pros and cons list: {pros}, {cons},
+  generate a list of 5 brief questions that ask to rate a student's comfortability with topics
+  to gauge the potential performance of a student in the class. Assume the student has not taken the class yet. 
+  Finally ask questions about what grade they got in the prerequisite class on a scale of A - F.`,
 );
 
-const chain = RunnableSequence.from([
-  prompt1,
-  new OpenAI({
-    openAIApiKey: process.env.OPENAI_API_KEY,
-  }),
-  parser,
+const chain2 = RunnableSequence.from([
+  prompt2,
+  model,
+  new StringOutputParser(),
+]);
+
+const prompt3 =
+  PromptTemplate.fromTemplate(`Given the following answers {answers} to the questions {questions}, give the user a brief strengths and weaknesses report of 6 total bullet points 
+they can use to better prepare themselves.`);
+
+const chain3 = RunnableSequence.from([
+  prompt3,
+  model,
+  new StringOutputParser(),
 ]);
 
 async function main() {
-  const response = await chain.invoke({
+  const { pros, prerequisites, cons } = await chain1.invoke({
     name: "E. Dijkstra",
     class: "CSE 130",
     description:
@@ -95,13 +64,26 @@ async function main() {
       "Review: I found this class to be quite difficult. The workload was heavy and the material was complex. Professor Dijkstra's teaching style was not very engaging.",
       "Review: CSE 130 with Professor Dijkstra was one of the best classes I've taken. The course content was interesting and relevant. The professor was always available to help and provided valuable feedback on assignments.",
     ].join("\n"),
-    format_instructions: parser.getFormatInstructions(),
+    format_instructions: parser1.getFormatInstructions(),
   });
 
-  console.log(response);
+  const response2 = await chain2.invoke({
+    pros: pros.join("\n"),
+    prerequisite: prerequisites.join("\n"),
+    cons: cons.join("\n"),
+  });
+
+  console.log(response2);
+
+  const response3 = await chain3.invoke({
+    questions: [
+      "How familiar are you with C++",
+      "How familiar are you with Linux",
+    ].join("\n"),
+    answers: ["Very familiar", "Somewhat familiar"].join("\n"),
+  });
+
+  console.log(response3);
 }
 
 main().then(() => process.exit(0));
-/*
-{ answer: 'Paris', sources: [ 'https://en.wikipedia.org/wiki/Paris' ] }
-*/
