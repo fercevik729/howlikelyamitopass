@@ -1,3 +1,4 @@
-export const APP_URL = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : "http://localhost:3000";
+export const APP_URL =
+  process.env.NODE_ENV === "production"
+    ? `https://www.helpmepass.study`
+    : "http://localhost:3000";
