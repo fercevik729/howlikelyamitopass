@@ -12,13 +12,18 @@ function SurveyResponse() {
   const answers = searchParams.get("answers")?.split(",");
   const course = searchParams.get("course");
   const professor = searchParams.get("professor");
+  const pros = searchParams.get("pros")?.split(";;;");
+  const cons = searchParams.get("cons")?.split(";;;");
 
   const [summary, setSummary] = useState<string>("");
   const [passRate, setPassRate] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
+  const [loadwheel, setLoadwheel] = useState(true);
 
   useEffect(() => {
+    if (summary !== "") return;
+    setSummary(" ");
     async function getReport() {
       setLoading(true);
       const res = await fetch(`${APP_URL}/api/ai/summary`, {
@@ -36,6 +41,7 @@ function SurveyResponse() {
       const data = await res.json();
       setSummary(data.report);
       setPassRate(data.passRate);
+      setLoadwheel(false);
     }
 
     getReport()
@@ -47,7 +53,11 @@ function SurveyResponse() {
         console.error(err);
         setError(true);
       });
-  }, []);
+  }, [answers, course, professor, questions, summary]);
+
+  useEffect(() => {
+    if (!loadwheel) setLoadwheel(true);
+  }, [loadwheel]);
 
   if (loading) {
     return <CircularProgress />;
@@ -59,13 +69,25 @@ function SurveyResponse() {
       </>
     );
   }
+
   return (
     <div className="flex flex-row justify-between">
-      <ResultsPercentage percentage={passRate * 100} />
+      {loadwheel && <ResultsPercentage percentage={passRate * 100} />}
 
       <div className="flex flex-col text-wrap w-2/5 mx-36">
         <h2 className="text-2xl">Summary</h2>
         <p>{summary}</p>
+
+        <h2> Pros</h2>
+        {pros?.map((pro: any) => {
+          return <p key={`Pro: ${pro}`}>{pro}</p>;
+        })}
+      </div>
+      <div className="flex flex-col gap-2 mt-5 font-mono">
+        <h2> Cons</h2>
+        {cons?.map((con: any) => {
+          return <p key={`Con: ${con}`}>{con}</p>;
+        })}
       </div>
 
       <div className="flex flex-row text-wrap w-1/3">

@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     cons: string[]
     prerequisites: string[]
   */
-  const { professor: name, course } = await req.json();
+  const { name, course } = await req.json();
 
   console.log(`name: ${name}, course: ${course}`);
 
@@ -36,6 +36,8 @@ export async function POST(req: NextRequest) {
 
   if (profComments === null)
     return NextResponse.json({ error: "Professor not found", status: 404 });
+
+  // return NextResponse.json({ pros: [], cons: [], prerequisites: [] });
 
   try {
     const aiResponse = await chain1.invoke({

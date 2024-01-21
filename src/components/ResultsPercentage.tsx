@@ -13,7 +13,7 @@ export default function ResultsPercentage(props: { percentage: number }) {
       const segs = [],
         colors = [];
       for (let i = 1; i <= 100; i += 5) {
-        if (i <= props.percentage) colors.push("#00ff00");
+        if (i < props.percentage) colors.push("#00ff00");
         else colors.push("red");
         segs.push("");
       }
@@ -30,7 +30,7 @@ export default function ResultsPercentage(props: { percentage: number }) {
         </p>
         <p className="text-center">chance you pass</p>
       </div>
-      <div className="scale-50 w-24 h-24 -translate-x-28 -translate-y-32">
+      <div className="scale-50 w-32 h-24 -translate-x-32 -translate-y-32">
         {wheel && (
           <WheelComponent
             segments={segments}

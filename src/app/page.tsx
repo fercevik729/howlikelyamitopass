@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <section id={"hero"} className={`flex py-36 items-center`}>
+      <section id={"hero"} className={`flex items-center h-full`}>
         <div className={"flex flex-col gap-[52px] text-white"}>
           <h1 className={"text-6xl font-bold"}>How Can I Pass?</h1>
           <span className={"text-xl"}>
@@ -32,8 +32,8 @@ export default function Home() {
             className={"ml-5"}
             src={"/spaceship.svg"}
             alt={"spaceship"}
-            width={500}
-            height={500}
+            width={400}
+            height={400}
           />
         </div>
       </section>

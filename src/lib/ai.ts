@@ -36,7 +36,8 @@ const prompt2 = PromptTemplate.fromTemplate(
   `Given prerequisite knowledge {prerequisites} and this pros and cons list: {pros}, {cons},
   generate a list of only 5 brief questions separated by that ask to rate a student's comfortability with topics
   to gauge the potential performance of a student in the class. Assume the student has not taken the class yet. 
-  Finally ask questions about what grade they got in the prerequisite classes on a scale of A - F.`,
+  Ask questions about what grade they got in the prerequisite classes on a scale of A - F. Ask Yes/No questions.
+  Make sure to ask at least one "comfortability rating" question, one "A-F" scale question, and one "Yes/No" question.`,
 );
 
 const chain2 = RunnableSequence.from([
