@@ -3,6 +3,16 @@ import { chain1, parser1 } from "@/lib/ai";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
+  /*
+    Input
+    name (of prof): string
+    course: string
+
+    Output
+    pros: string[]
+    cons: string[]
+    prerequisites: string[]
+  */
   const { name, course } = await req.json();
 
   const courseDescription = await prisma.course.findFirst({

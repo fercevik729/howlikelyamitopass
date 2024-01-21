@@ -80,7 +80,7 @@ function Skills() {
       setShown(true);
     }, 300);
     return () => clearTimeout(timer);
-  }, [shown]);
+  }, [shown, answers.length]);
 
   return (
     <main>
