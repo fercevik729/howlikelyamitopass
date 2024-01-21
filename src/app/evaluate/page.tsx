@@ -4,6 +4,7 @@ import ProfessorStats from "@/components/ProfessorStats";
 import { APP_URL } from "@/config";
 import { Course, Professor } from "@/types/model";
 import { useEffect, useState } from "react";
+import { Typography } from "@mui/material";
 
 export default function Evaluate() {
   const [data, setData] = useState<Course[]>([]);
@@ -27,21 +28,24 @@ export default function Evaluate() {
   }, []);
 
   return (
-    <div
-      className={
-        "flex gap-5 max-w-[1200px] mt-10 mx-auto px-[25px] justify-between"
-      }
-    >
-      <ProfessorChoice
-        courses={data}
-        professorSelected={professorSelected}
-        setProfessorSelected={setProfessorSelected}
-        setCourse={setCourse}
-      />
-      {professorSelected && (
-        <ProfessorStats professor={professorSelected} course={course} />
-      )}
-      {!professorSelected && <div className={"w-[450px]"}></div>}
+    <div className={"max-w-[1200px] mt-10 mx-auto"}>
+      <Typography variant={"h1"} className={"text-5xl font-bold text-center"}>
+        Lookup Course & Professor
+      </Typography>
+      <div
+        className={"mt-16 grid grid-cols-2 gap-x-7 px-[25px] justify-between"}
+      >
+        <ProfessorChoice
+          courses={data}
+          professorSelected={professorSelected}
+          setProfessorSelected={setProfessorSelected}
+          setCourse={setCourse}
+        />
+        {professorSelected && (
+          <ProfessorStats professor={professorSelected} course={course} />
+        )}
+        {!professorSelected && <div className={"w-[450px]"}></div>}
+      </div>
     </div>
   );
 }
